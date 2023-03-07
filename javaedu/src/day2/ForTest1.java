@@ -5,7 +5,7 @@ public class ForTest1 {
 		 for(int num=1; num <= 10; num++)
 		        System.out.println(num);
 		 System.out.println();
-		 for(int num=1; num <= 10; num+=2)
+		 for(int num=1; num <= 10; num+=2) // block scope
 		        System.out.println(num);
 		 //System.out.println(num);
 	}

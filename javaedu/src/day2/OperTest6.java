@@ -13,7 +13,7 @@ public class OperTest6 {
 		
 		System.out.println(num1>num2);
 		System.out.println(num1<num2);
-		System.out.println(num1==num2); // equal 두 항의 값이 동일하면 true
+		System.out.println(num1==num2); // equal 두 항의 값이 동일하면 true 
 		System.out.println(num1!=num2); // not equal 두 항의 값이 다르면 true
 		
 		System.out.println(num1>0 && num2>0);

@@ -8,7 +8,7 @@ public class IfTest7_1 {
 		// 70~79 - "XX점은 C등급"
 		// 60~69 - "XX점은 D등급"
 		// 0~59 - "XX점은 F등급"
-		char grade='F';
+		char grade = 'F';
 		if(score >= 90)
 			grade = 'A';
 		else if(score >= 80)

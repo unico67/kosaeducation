@@ -1,10 +1,10 @@
 package day2;
 
-public class OperTest10 {
+public class IfTest8 {
 	public static void main(String[] args) {
-		int charCode = 'A';
+		//int charCode = 'A';
 		//int charCode = 'a';
-		//int charCode = '5';
+		int charCode = '5';
 
 		if( (65<=charCode) & (charCode<=90) ) {
 			System.out.println("대문자이군요.");
@@ -28,7 +28,7 @@ public class OperTest10 {
 		}
 
 		boolean result = (value%2==0) || (value%3==0);
-		if( !result ) {
+		if( !result ) { // if( result == false) {
 			System.out.println("2 또는 3의 배수가 아니군요.");
 		}
 	}

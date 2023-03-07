@@ -1,10 +1,9 @@
 package day2;
 
 public class IfTest3 {
-
 	public static void main(String[] args) {
-		int num = (int)(Math.random()*10)+1;
-		System.out.println("추출된 num 값 : "+num);
+		int num = (int) (Math.random() * 10) + 1;
+		System.out.println("추출된 num 값 : " + num);
 		System.out.println(1);
 		if (num % 2 == 1)
 			System.out.println(2);
