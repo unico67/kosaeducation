@@ -5,5 +5,10 @@ public class FirstApp {
 	*/
 	public static void main(String[] args) {
 		System.out.println("안녕? 자바!!");  //마지막의 세미콜론 기호는 생략 불가
+		long a = 1;
+		for(int i=1; i < 21; i++) {
+			a *= i;
+			System.out.println(a);
+		}
 	}
 }
