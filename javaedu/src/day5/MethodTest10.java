@@ -1,5 +1,6 @@
+package day5;
 
-public class Imsi {
+public class MethodTest10 {
 
 	public static void main(String[] args) {
 		int[][] nums = new int[5][3];
