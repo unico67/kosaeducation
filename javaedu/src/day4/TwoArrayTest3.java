@@ -9,6 +9,7 @@ public class TwoArrayTest3 {
 		System.out.println(twoA); // 행의 배열의 참조값
 		System.out.println(twoA[0]); // 첫 번째 행이 참조하는 열의 배열의 참조값
 		System.out.println(twoA[0][0]); // 1행 1열의 값
+		System.out.println(twoA[3][2]); 
 		
 		for(int row=0; row < twoA.length; row++) {
 			for(int col=0; col < twoA[row].length; col++) {

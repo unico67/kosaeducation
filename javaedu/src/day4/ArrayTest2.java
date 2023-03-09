@@ -26,3 +26,9 @@ public class ArrayTest2 {
 			System.out.println(score2[i]);		
 	}
 }
+
+
+
+
+
+
