@@ -10,5 +10,11 @@ public class FirstApp {
 			a *= i;
 			System.out.println(a);
 		}
+		//pr(new char[] {'a','b'});
+		pr('a','b', 'c');
+	}
+	static void pr(char c0, char... c1) {
+		System.out.println(c0);
+		System.out.println(c1);
 	}
 }

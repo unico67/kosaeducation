@@ -12,6 +12,6 @@ public class MethodTest1 {
 	}
 	static void printMyName() {
 		System.out.println("유니코");
-		return;
+		//return;
 	}
 }

@@ -1,10 +1,11 @@
 package day5;
 public class MethodTest9 {
 	public static void main(String[] args) {
-		int p1[] = { 20, 10, 14, 30};
+		int p1[] = { 20, 10, 14, 30 };
 		System.out.println("p1 변수의 값 : "+p1);
 		printArray(p1);
 		int[] result = updateArray1(p1);
+		System.out.println("result 변수의 값 : "+result);
 		printArray(result);
 		printArray(p1);
 		System.out.println("-------------------");
@@ -29,8 +30,7 @@ public class MethodTest9 {
 		System.out.println("p3 변수의 값 : "+p3);
 		for(int i=0; i < p3.length;i++)
 			p3[i] = p3[i] * 2;
-	}
-	
+	}	
 }
 
 
