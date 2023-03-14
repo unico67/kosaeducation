@@ -1,7 +1,8 @@
 package day7;
 class Parent {  
 	int x = 1, y = 2;
-	public String toString(int n) {
+	@Override
+	public String toString() {
 		return "Parent 클래스의 객체 입니당";
 	}	
 }
@@ -9,12 +10,12 @@ class Child extends Parent {
 	int x = 10;
 	void printInfo() {
 		int x = 100;
-		System.out.println(x);				//	
-		System.out.println(this.x);		//  
-		System.out.println(super.x);		//	
-		System.out.println(y);				//  	
-		System.out.println(this.y);		//	
-		System.out.println(super.y);		//  	
+		System.out.println(x);				//100
+		System.out.println(this.x);		//10  
+		System.out.println(super.x);		//1	
+		System.out.println(y);				//2  	
+		System.out.println(this.y);		//2	
+		System.out.println(super.y);		//2  	
 		//System.out.println(z);
 	}
 	public String toString() {

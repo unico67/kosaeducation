@@ -1,6 +1,5 @@
 package day7;
 
-
 abstract class Pet {
 	public abstract void petSound();
 

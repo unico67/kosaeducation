@@ -8,7 +8,7 @@ class Card{
 }
 
 public class CardTest{
-	public static void main(String args[]){	
+	public static void main(String args[]){
 		Card c1 = new Card();		
 		c1.kind = "Heart";
 		c1.number = 7;	

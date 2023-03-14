@@ -20,6 +20,7 @@ class Point {
 class Point3D extends Point {
 	int z;
 	Point3D(int x, int y, int z) {		
+		super(x,y);
 		this.z = z;		
 	}
 	String getLocation() {	// 오버라이딩
