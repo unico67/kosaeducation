@@ -40,7 +40,6 @@ public class AbstractTest2 {
 		s.setColor("연두색");
 		printInfo(s);
 	}
-
 	static void printInfo(Shape obj) {
 		obj.draw();
 	}
