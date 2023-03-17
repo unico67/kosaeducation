@@ -17,6 +17,7 @@ public class ExceptionTest3 {
 			b();
 		} catch (TestException e){	
 			System.out.println("오류 발생 : "+e.getMessage());
+			//System.exit(1);
 		}
 		System.out.println("a()수행종료");
 	}

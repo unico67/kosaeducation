@@ -10,13 +10,15 @@ public class ExceptionTest2 {
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("프로그램 아규먼트를 2 개 전달하세요!!");
 		} catch (ArithmeticException e) {
-		 System.out.println(e.getMessage());
+			System.out.println(e.getMessage());
 			System.out.println("두번째 프로그램 아규먼트는 0이 아닌 값을 전달하세요!!");
 			return;
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 			System.out.println("프로그램 아규먼트로 숫자를 전달하세요!!");
-		}  finally {
+		} catch (Exception e) {
+			System.out.println("예외발생");
+		} finally {
 			System.out.println("항상 수행!!");
 		}
 		System.out.println("수행종료");

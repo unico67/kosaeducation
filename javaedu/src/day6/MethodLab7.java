@@ -55,7 +55,7 @@ public class MethodLab7 {
       return intArr;
    }
    
-   static void printArray(int[] intArr) {
+   public static void printArray(int[] intArr) {
       for(int i=0;i <intArr.length;i++) {
          System.out.print(intArr[i]);
          if(i<intArr.length-1) {

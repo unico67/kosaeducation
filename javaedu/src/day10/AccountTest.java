@@ -9,10 +9,10 @@ class Account {
 		setAccount(account);
 		setBalance(balance);
 		setInterestRate(interestRate);
-	}	
-	@Override  
+	}		
+	@Override
 	public String toString() {
-		return "계좌정보 : " + account + " " + balance + " " + interestRate;
+		return "Account [account=" + account + ", balance=" + balance + ", interestRate=" + interestRate + "]";
 	}
 	public double calculateInterest() {
 		// 잔액기준 이자 계산		
