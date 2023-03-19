@@ -1,4 +1,5 @@
 package day3;
+
 /*
 [ 실습1 ]
 1. WhileLab1 라는 클래스를 생성한다.
@@ -27,17 +28,17 @@ package day3;
  */
 public class WhileLab1_1 {
 	public static void main(String[] args) {
-		int rand = (int)(Math.random()*6)+5;
-		
+		int rand = (int) (Math.random() * 6) + 5;
+
 		System.out.print("[for]\n\n");
-		for(int i = 1; i <= rand; i++) {
-			System.out.println(i + " -> " + i*i);
+		for (int i = 1; i <= rand; i++) {
+			System.out.println(i + " -> " + i * i);
 		}
-		
+
 		System.out.print("\n\n[while]\n\n");
 		int cnt = 1;
-		while(cnt <= rand) {
-			System.out.println(cnt + " -> " + cnt*cnt);
+		while (cnt <= rand) {
+			System.out.println(cnt + " -> " + cnt * cnt);
 			cnt++;
 		}
 	}

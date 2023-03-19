@@ -2,23 +2,28 @@ package day9;
 
 class MySingleton2 {
 	private static MySingleton2 obj = null;
-	private MySingleton2() {		
+
+	private MySingleton2() {
 	}
+
 	static MySingleton2 getMy() {
 		if (obj == null)
 			obj = new MySingleton2();
 		return obj;
 	}
+
 	void printMyName() {
-		System.out.println("듀크");	
+		System.out.println("듀크");
 	}
+
 	void printFavoriteFood() {
-		System.out.println("갈비");	
+		System.out.println("갈비");
 	}
 }
+
 public class MySingletonTest2 {
 	public static void main(String[] args) {
-		//MySingleton2 my = new MySingleton2();
+		// MySingleton2 my = new MySingleton2();
 		MySingleton2 my = MySingleton2.getMy();
 		my.printMyName();
 		my.printFavoriteFood();

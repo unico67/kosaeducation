@@ -24,21 +24,21 @@ package day6;
  */
 
 public class MethodLab9 {
-	
-	public static void main(String[] args) {		
+
+	public static void main(String[] args) {
 		System.out.println(isRightTriangle(3, 4, 5));
-		System.out.println(isRightTriangle(1, 2, 3));	
+		System.out.println(isRightTriangle(1, 2, 3));
 	}
-	
+
 	static boolean isRightTriangle(int width, int height, int hypo) {
-		
-		if(width<=0 || height <= 0||hypo<=0) {
+
+		if (width <= 0 || height <= 0 || hypo <= 0) {
 			return false;
 		}
-		if(width*width + height*height == hypo*hypo) {
+		if (width * width + height * height == hypo * hypo) {
 			return true;
 		}
-		return false;		
+		return false;
 	}
 
 }

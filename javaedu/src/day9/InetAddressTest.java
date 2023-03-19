@@ -1,5 +1,7 @@
 package day9;
-import java.net.*;
+
+import java.net.InetAddress;
+
 public class InetAddressTest {
 	public static void main(String[] args) throws Exception {
 		InetAddress inet = InetAddress.getLocalHost();

@@ -1,16 +1,19 @@
 package day10.case1;
 
 public class LgTV {
-	public void turnOn(){
+	public void turnOn() {
 		System.out.println("LgTV --- 전원을 켠다.");
 	}
-	public void turnOff(){
+
+	public void turnOff() {
 		System.out.println("LgTV --- 전원을 끈다.");
 	}
-	public void soundUp(){
+
+	public void soundUp() {
 		System.out.println("LgTV --- 소리를 높인다.");
 	}
-	public void soundDown(){
+
+	public void soundDown() {
 		System.out.println("LgTV --- 소리를 낮춘다.");
 	}
 

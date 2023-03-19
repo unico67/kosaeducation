@@ -8,7 +8,7 @@ public class TimeTest2 {
 		System.out.println(t);
 		t.setMinute(-10);
 		System.out.println(t);
-		t.setHour(t.getHour()+2);
+		t.setHour(t.getHour() + 2);
 		System.out.println(t);
 	}
 }

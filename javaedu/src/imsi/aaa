@@ -1,0 +1,5 @@
+
+			ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper();
+			List<HashMap<String, Object>> listOfMaps = mapper.readValue(req, new TypeReference<ArrayList<HashMap<String, Object>>>() {});
+			System.out.println(listOfMaps.size());
+			//System.out.println(listOfMaps[0].get("LampScpgmtb").get("list_total_count"));

@@ -28,53 +28,53 @@ public class TwoArrayLab1 {
 
 	public static void main(String[] args) {
 		int size = 4;
-		int [][] arr = new int[size][size];
-		int num=0;
-		
-		for(int i=0; i<size ; i++) {
-			for(int j=0; j<size;j++) {
-				arr[i][j] =10+(num*2) ;
+		int[][] arr = new int[size][size];
+		int num = 0;
+
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				arr[i][j] = 10 + (num * 2);
 				num++;
 			}
 		}
-		
+
 		System.out.println("1행의 1열의 데이터 : " + arr[0][0]);
-		System.out.printf("%d행 %d열의 데이터 : %d\n",size-1,size,arr[size-2][size-1]);
+		System.out.printf("%d행 %d열의 데이터 : %d\n", size - 1, size, arr[size - 2][size - 1]);
 		System.out.println("행의 갯수 : " + arr.length);
 		System.out.println("열의 갯수 : " + arr[0].length);
-		
+
 		System.out.print("3행의 데이터들 : ");
-		for(int i=0; i<size;i++) {
-			System.out.print(arr[2][i]+" ");
+		for (int i = 0; i < size; i++) {
+			System.out.print(arr[2][i] + " ");
 		}
-		
+
 		System.out.print("\n2열의 데이터들 : ");
-		for(int i=0; i<size;i++) {
-			System.out.print(arr[i][1]+" ");
+		for (int i = 0; i < size; i++) {
+			System.out.print(arr[i][1] + " ");
 		}
-		
+
 		System.out.print("\n왼쪽 대각선 데이터들:");
-		for(int i=0; i<size ; i++) {
-			for(int j=0; j<=i;j++) {
-				if(i == j) {
-					System.out.print(arr[i][j]+" ");
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j <= i; j++) {
+				if (i == j) {
+					System.out.print(arr[i][j] + " ");
 				}
 			}
 		}
 		System.out.print("\n왼쪽 대각선 데이터들:");
-		for(int i = 0;i<arr.length;i++) {
-			System.out.print(arr[i][i]+" ");
-		}			
-		
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i][i] + " ");
+		}
+
 		System.out.print("\n오른쪽 대각선 데이터들 : ");
-		for(int i=0; i<size ; i++) {
-			for(int j=0; j<size ;j++) {
-				if(i+j == size-1) 
-					System.out.print(arr[i][j]+" ");
+		for (int i = 0; i < size; i++) {
+			for (int j = 0; j < size; j++) {
+				if (i + j == size - 1)
+					System.out.print(arr[i][j] + " ");
 			}
 		}
 		System.out.print("\n오른쪽 대각선 데이터들 : ");
-		for(int i = 0;i<arr.length;i++) {
+		for (int i = 0; i < arr.length; i++) {
 			System.out.print(arr[i][arr.length - 1 - i] + " ");
 		}
 	}

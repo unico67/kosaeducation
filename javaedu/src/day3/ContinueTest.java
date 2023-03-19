@@ -4,8 +4,8 @@ public class ContinueTest {
 
 	public static void main(String[] args) {
 		int num;
-		while(true) {
-			num = (int)(Math.random()*31);
+		while (true) {
+			num = (int) (Math.random() * 31);
 			if (num == 0) {
 				System.out.println("\n종료");
 				break;
@@ -14,7 +14,7 @@ public class ContinueTest {
 				System.out.println('@');
 				continue;
 			}
-			System.out.printf("%d(%c)", num, (char)(96+num));				
+			System.out.printf("%d(%c)", num, (char) (96 + num));
 		}
 	}
 }

@@ -1,4 +1,5 @@
 package day4;
+
 /*
 [ 실습 4 ]
 1. ArrayLab4 이라는 클래스를 하나 만든다.
@@ -17,25 +18,25 @@ package day4;
  */
 public class ArrayLab4 {
 	public static void main(String[] args) {
-		int arrLength = (int)(Math.random()*6)+5;
+		int arrLength = (int) (Math.random() * 6) + 5;
 		int[] arr = new int[arrLength];
-		
+
 		System.out.println("난수의 값 : " + arrLength);
-		for(int i = 0; i < arrLength; i++) {
-			arr[i] = (int)(Math.random()*26)+1;
+		for (int i = 0; i < arrLength; i++) {
+			arr[i] = (int) (Math.random() * 26) + 1;
 		}
 		char[] cArr = new char[arr.length];
-		for(int i = 0; i < arrLength; i++) {
-			cArr[i] = (char)(96+arr[i]);
+		for (int i = 0; i < arrLength; i++) {
+			cArr[i] = (char) (96 + arr[i]);
 		}
 
-		for(int i = 0; i < arrLength-1; i++) {
+		for (int i = 0; i < arrLength - 1; i++) {
 			System.out.print(arr[i] + ",");
 		}
-		System.out.println(arr[arrLength-1]);
-		for(int i = 0; i < arrLength-1; i++) {
+		System.out.println(arr[arrLength - 1]);
+		for (int i = 0; i < arrLength - 1; i++) {
 			System.out.print(cArr[i] + ",");
 		}
-		System.out.println(cArr[arrLength-1]);		
+		System.out.println(cArr[arrLength - 1]);
 	}
 }

@@ -11,24 +11,20 @@ package day4;
     A
  */
 
-
 //65 -> 90
 //97 -> 122
 public class ArrayLab3 {
 	public static void main(String[] args) {
-		char[] cArr = new char[] {'J', 'a', 'v', 'a'};
-		for(int i = 0; i < cArr.length; i++) {
-			if(cArr[i] >= 'A' && cArr[i] <= 'Z') {
+		char[] cArr = new char[] { 'J', 'a', 'v', 'a' };
+		for (int i = 0; i < cArr.length; i++) {
+			if (cArr[i] >= 'A' && cArr[i] <= 'Z') {
 				cArr[i] += 32;
-			}else if(cArr[i] >= 'a' && cArr[i] <= 'z'){
+			} else if (cArr[i] >= 'a' && cArr[i] <= 'z') {
 				cArr[i] -= 32;
 			}
 		}
-		for(char c : cArr) {
+		for (char c : cArr) {
 			System.out.println(c);
 		}
 	}
 }
-
-
-

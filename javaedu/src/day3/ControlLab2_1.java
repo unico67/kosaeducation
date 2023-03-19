@@ -1,4 +1,5 @@
 package day3;
+
 /*
 1. ControlLab2 이라는 클래스를 생성한다.
 2. 다음 기능을 반복하여 처리하는 자바 프로그램을 구현한다.
@@ -14,13 +15,10 @@ package day3;
  */
 public class ControlLab2_1 {
 	public static void main(String[] args) {
-		for(int i = 1; i < 11; i++) {
-			if(i%3==0 || i%4==0) 
+		for (int i = 1; i < 11; i++) {
+			if (i % 3 == 0 || i % 4 == 0)
 				continue;
 			System.out.println(i);
 		}
 	}
 }
-
-
-

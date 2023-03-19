@@ -1,4 +1,5 @@
 package day7;
+
 public class BlockTest {
 	static {
 		System.out.println("static 블럭 수행");
@@ -6,9 +7,11 @@ public class BlockTest {
 	{
 		System.out.println("instance 블럭 수행");
 	}
-	public BlockTest() {     
+
+	public BlockTest() {
 		System.out.println("생성자 수행");
 	}
+
 	public static void main(String args[]) {
 		System.out.println("BlockTest bt = new BlockTest(); ");
 		BlockTest bt = new BlockTest();

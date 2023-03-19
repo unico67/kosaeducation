@@ -12,9 +12,9 @@ public class ForTest4 {
 		System.out.println(sumV);
 		sumV = 0;
 		for (int n = 1; n <= 10; n++) {
-			sumV += n*n;
+			sumV += n * n;
 		}
 		System.out.println(sumV);
-		
+
 	}
 }

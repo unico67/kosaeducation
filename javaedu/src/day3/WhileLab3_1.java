@@ -1,4 +1,5 @@
 package day3;
+
 /*
 [ 실습3 ] - while 문은 무한루프 처리하고 루프를 끝낼 때는 break 문 사용
 1. WhileLab3 라는 클래스를 생성한다.
@@ -16,14 +17,14 @@ public class WhileLab3_1 {
 	public static void main(String[] args) {
 		int rand = 0;
 		int cnt = 0;
-		
-		while(true) {
-			rand = (int)(Math.random()*31);
-			if(rand == 0 || (rand >= 27 && rand <31)) 
+
+		while (true) {
+			rand = (int) (Math.random() * 31);
+			if (rand == 0 || (rand >= 27 && rand < 31))
 				break;
-			System.out.printf("%d-%c, %2$d, 0x%2$x\n", rand, rand+64);
+			System.out.printf("%d-%c, %2$d, 0x%2$x\n", rand, rand + 64);
 			cnt++;
-			
+
 		}
 		System.out.println("출력횟수는 " + cnt + " 번입니다.");
 	}

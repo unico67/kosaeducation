@@ -12,13 +12,12 @@ public class PolyTest {
 		printObjectInfo(100); // java 5 - autoboxing java.lang.Integer
 		printObjectInfo(3.14);
 	}
+
 	static void printObjectInfo(Object o) {
-		if ( o instanceof String ) {
-			System.out.println("문자열 객체가 전달됨 : " + o.toString() + "-" +
-																	 ((String)o).length());
+		if (o instanceof String) {
+			System.out.println("문자열 객체가 전달됨 : " + o.toString() + "-" + ((String) o).length());
 		} else {
-			System.out.println("전달된 객체의 클래스명 : " + 
-	                                    o.getClass().getName());
+			System.out.println("전달된 객체의 클래스명 : " + o.getClass().getName());
 		}
 	}
 }

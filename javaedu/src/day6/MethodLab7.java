@@ -1,6 +1,5 @@
 package day6;
 
-
 /*
  * 1. 클래스명 : MethodLab7
 2. 정의해야 하는 메서드(2개)
@@ -33,35 +32,34 @@ package day6;
 
 public class MethodLab7 {
 
-   public static void main(String[] args) {
-      
-	   
-	 int[] intArr1 = powerArray(2);
-	 int[] intArr2 = powerArray(3);
-	 //int[] intArr3 = powerArray(4);
-	 
-     printArray(intArr1);
-     printArray(intArr2);
-     printArray(powerArray(4));
-   }
-   
-   static int[] powerArray(int power) {
-      
-      int[] intArr = new int [10];
-      
-      for(int i=0;i<intArr.length;i++) {
-         intArr[i] = (i+1)*power;
-      }
-      return intArr;
-   }
-   
-   public static void printArray(int[] intArr) {
-      for(int i=0;i <intArr.length;i++) {
-         System.out.print(intArr[i]);
-         if(i<intArr.length-1) {
-            System.out.print(',');
-         }
-      }
-      System.out.println();
-   }
+	public static void main(String[] args) {
+
+		int[] intArr1 = powerArray(2);
+		int[] intArr2 = powerArray(3);
+		// int[] intArr3 = powerArray(4);
+
+		printArray(intArr1);
+		printArray(intArr2);
+		printArray(powerArray(4));
+	}
+
+	static int[] powerArray(int power) {
+
+		int[] intArr = new int[10];
+
+		for (int i = 0; i < intArr.length; i++) {
+			intArr[i] = (i + 1) * power;
+		}
+		return intArr;
+	}
+
+	public static void printArray(int[] intArr) {
+		for (int i = 0; i < intArr.length; i++) {
+			System.out.print(intArr[i]);
+			if (i < intArr.length - 1) {
+				System.out.print(',');
+			}
+		}
+		System.out.println();
+	}
 }

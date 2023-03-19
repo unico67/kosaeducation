@@ -1,9 +1,9 @@
 package day10.case3;
 
 public class TVUser {
-	public static void main(String[] args) {		
+	public static void main(String[] args) {
 		TV tv = TVFactory.getTV(args[0]);
-		if(tv != null) {
+		if (tv != null) {
 			tv.powerOn();
 			tv.volumnUp();
 			tv.volumnDown();

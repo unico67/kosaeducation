@@ -1,4 +1,5 @@
 package day3;
+
 /*
 [ 실습4 ]
 1. ControlLab1 이라는 클래스를 생성한다.
@@ -18,14 +19,14 @@ public class ControlLab1_1 {
 		int rand = 0;
 		int cnt = 0;
 		int sum = 0;
-		
-		while(true) {
-			rand = (int)(Math.random()*11)+10;
+
+		while (true) {
+			rand = (int) (Math.random() * 11) + 10;
 			sum = 0;
-			if(rand == 11 || rand == 17 || rand == 19) {				
+			if (rand == 11 || rand == 17 || rand == 19) {
 				break;
-			} else if(rand % 3 == 0 || rand % 5 ==0) {
-				for(int i = 1; i <= rand; i++) {
+			} else if (rand % 3 == 0 || rand % 5 == 0) {
+				for (int i = 1; i <= rand; i++) {
 					sum += i;
 				}
 				System.out.printf("1부터 %d까지의 합 : %d\n", rand, sum);

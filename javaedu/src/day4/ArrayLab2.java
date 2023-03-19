@@ -1,4 +1,5 @@
 package day4;
+
 /*
 [ 실습 2 ]
 
@@ -15,14 +16,14 @@ public class ArrayLab2 {
 	public static void main(String[] args) {
 		int[] arr = new int[10];
 		int sum = 0;
-		for(int i = 0; i < arr.length; i++) {
-			arr[i] = (int)(Math.random()*17)+4;
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int) (Math.random() * 17) + 4;
 		}
 		System.out.print("모든 원소의 값 : ");
-		for(int i = 0; i < arr.length; i++) {
+		for (int i = 0; i < arr.length; i++) {
 			sum += arr[i];
-			if(i == arr.length-1) {
-				System.out.println(arr[i]);				
+			if (i == arr.length - 1) {
+				System.out.println(arr[i]);
 				break;
 			}
 			System.out.print(arr[i] + ",");

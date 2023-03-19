@@ -1,4 +1,5 @@
 package emp;
+
 public class Company {
 	public static void main(String[] args) {
 
@@ -20,10 +21,9 @@ public class Company {
 		System.out.println("-----------------------------------------------------");
 
 		String str = "";
-		for (Employee data : emp) {			
-			str = data.getName() + "\t" + data.getDepartment() + 
-					 (data.getDepartment().length() > 6? "":"\t") +
-					"\t" + data.getSalary() + "\t";
+		for (Employee data : emp) {
+			str = data.getName() + "\t" + data.getDepartment() + (data.getDepartment().length() > 6 ? "" : "\t") + "\t"
+					+ data.getSalary() + "\t";
 			if (isTax)
 				str += data.tax() + "\t";
 			if (data instanceof Sales) {

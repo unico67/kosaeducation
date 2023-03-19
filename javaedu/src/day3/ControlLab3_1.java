@@ -1,4 +1,5 @@
 package day3;
+
 /*
 [ 실습6 ]
 1. ControlLab3 이라는 클래스를 생성한다.
@@ -34,23 +35,23 @@ public class ControlLab3_1 {
 	public static void main(String[] args) {
 		int rand = 0;
 		String str = "";
-		
-		while(true) {
-			rand = (int)(Math.random()*120)+1;
-			if(rand < 50) {
+
+		while (true) {
+			rand = (int) (Math.random() * 120) + 1;
+			if (rand < 50) {
 				str = "50 미만";
-				if(rand % 10 == 3) 
+				if (rand % 10 == 3)
 					str = "*듀크팀*";
-			} else if(rand >= 50 && rand <= 80) {
+			} else if (rand >= 50 && rand <= 80) {
 				str = "50 이상 80 이하";
-				if(rand/10 == 7) 
+				if (rand / 10 == 7)
 					str = "*턱시팀*";
-			} else if(rand >= 81 && rand <= 100) 
+			} else if (rand >= 81 && rand <= 100)
 				continue;
-			else 
+			else
 				break;
 			System.out.printf("%d : %s\n", rand, str);
 		}
-		
+
 	}
 }

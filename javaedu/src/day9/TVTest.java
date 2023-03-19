@@ -47,14 +47,14 @@ class TV {
 		channel++;
 		if (channel > 10) {
 			channel = 1;
-		}		
+		}
 	}
 
 	public void channelDown() {
 		channel--;
 		if (channel < 1) {
 			channel = 10;
-		}		
+		}
 	}
 }
 
@@ -86,9 +86,11 @@ class SaleTV extends TV {
 		System.out.printf("%s 모델의 상품을 판매합니다. %,d원을 지불해주세요.\n", getModel(), price);
 	}
 
-	/*public String toString() {
-		return String.format("판매상품정보 : 모델명(%s), 가격(%,d원), 크기(%d)", getModel(), price, getSize());
-	}*/
+	/*
+	 * public String toString() { return
+	 * String.format("판매상품정보 : 모델명(%s), 가격(%,d원), 크기(%d)", getModel(), price,
+	 * getSize()); }
+	 */
 }
 
 class RentalTV extends TV implements Rentable {
@@ -146,8 +148,7 @@ public class TVTest {
 		System.out.println(tv.toString());
 		if (tv instanceof RentalTV) {
 			((RentalTV) tv).play();
-		}
-		else if (tv instanceof SaleTV) {
+		} else if (tv instanceof SaleTV) {
 			((SaleTV) tv).play();
 			((SaleTV) tv).sale();
 		}

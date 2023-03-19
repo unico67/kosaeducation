@@ -1,6 +1,5 @@
 package emp;
 
-
 public class Secretary extends Employee implements Bonus {
 
 	public Secretary() {
@@ -14,9 +13,8 @@ public class Secretary extends Employee implements Bonus {
 		return getSalary() * 0.1;
 	}
 
-
 	public void incentive(int pay) {
-		int incen =  (int) Math.round(pay*0.8);
-		setSalary(getSalary()+incen);
+		int incen = (int) Math.round(pay * 0.8);
+		setSalary(getSalary() + incen);
 	}
 }

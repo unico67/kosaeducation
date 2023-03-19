@@ -29,17 +29,18 @@ package day6;
 
 public class MethodLab8 {
 
-	public static void main(String[] args) {		
-    	int sum1 = addEven(10, 2, 5, 13, 7);
-    	int sum2 = addEven(11, 22, 33, 44, 55, 66);
-    	int sum3 = addEven();
-    	int sum4 = addEven(100, 101, 103);
+	public static void main(String[] args) {
+		int sum1 = addEven(10, 2, 5, 13, 7);
+		int sum2 = addEven(11, 22, 33, 44, 55, 66);
+		int sum3 = addEven();
+		int sum4 = addEven(100, 101, 103);
 
-        System.out.println("호출 1 : " + sum1);
-        System.out.println("호출 2 : " + sum2);
-        System.out.println("호출 3 : " + sum3);
-        System.out.println("호출 4 : " + sum4);
-    }	
+		System.out.println("호출 1 : " + sum1);
+		System.out.println("호출 2 : " + sum2);
+		System.out.println("호출 3 : " + sum3);
+		System.out.println("호출 4 : " + sum4);
+	}
+
 	static int addEven(int... nums) {
 		if (nums.length == 0) {
 			return -1;

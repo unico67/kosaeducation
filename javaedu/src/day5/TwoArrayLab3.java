@@ -35,14 +35,14 @@ public class TwoArrayLab3 {
 				{ 4, 3, 1, 0, 4, 2, 7 } };
 
 		int[] sum1 = new int[7];
-		int[] sum2 = new int[4];  // sumDay,  sum_day
+		int[] sum2 = new int[4]; // sumDay, sum_day
 
 		char[] week = { '일', '월', '화', '수', '목', '금', '토' };
 
 		for (int w = 0; w < mon.length; w++) {
 			for (int d = 0; d < mon[w].length; d++) {
 				sum1[d] += mon[w][d];
-				sum2[w] += mon[w][d];				
+				sum2[w] += mon[w][d];
 			}
 		}
 
@@ -51,7 +51,7 @@ public class TwoArrayLab3 {
 		}
 		System.out.println("---------------------");
 		for (int i = 0; i < sum2.length; i++) {
-			System.out.printf("%d주차 : %d시간\n", i+1, sum2[i]);
+			System.out.printf("%d주차 : %d시간\n", i + 1, sum2[i]);
 		}
 
 	}

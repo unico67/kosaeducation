@@ -1,4 +1,5 @@
 package day1;
+
 public class TypeTest1 {
 	public static void main(String[] args) {
 		byte var1 = -128;
@@ -6,7 +7,7 @@ public class TypeTest1 {
 		byte var3 = 0;
 		byte var4 = 30;
 		byte var5 = 127;
-		//byte var6 = 128; //컴파일 에러(Type mismatch: cannot convert from int byte)
+		// byte var6 = 128; //컴파일 에러(Type mismatch: cannot convert from int byte)
 
 		System.out.println(var1);
 		System.out.println(var2);

@@ -6,22 +6,22 @@ public class ArrayTest3 {
 		int a2[] = new int[5];
 		long a3[] = new long[20];
 		double a4[] = new double[3];
-		
+
 		System.out.println(a1);
 		System.out.println(a1.length);
-		
+
 		System.out.println(a2);
 		System.out.println(a2.length);
-		
+
 		System.out.println(a3);
 		System.out.println(a3.length);
-		
+
 		System.out.println(a4);
 		System.out.println(a4.length);
-		
+
 		a2 = new int[100];
 		System.out.println(a2);
 		System.out.println(a2.length);
-		
+
 	}
 }

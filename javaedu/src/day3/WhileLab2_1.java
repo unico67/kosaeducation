@@ -1,4 +1,5 @@
 package day3;
+
 /*
 [ 실습2 ] - while 문은 무한루프 처리하고 루프를 끝낼 때는 break 문 사용
 
@@ -20,20 +21,20 @@ public class WhileLab2_1 {
 	public static void main(String[] args) {
 		int pairNum1 = 0;
 		int pairNum2 = 0;
-		
-		while(true) {
-			pairNum1 = (int)(Math.random()*6)+1;
-			pairNum2 = (int)(Math.random()*6)+1;
-			
-			if(pairNum1 == pairNum2) {
+
+		while (true) {
+			pairNum1 = (int) (Math.random() * 6) + 1;
+			pairNum2 = (int) (Math.random() * 6) + 1;
+
+			if (pairNum1 == pairNum2) {
 				System.out.print("게임 끝");
 				break;
-			} else if(pairNum1 > pairNum2) {
+			} else if (pairNum1 > pairNum2) {
 				System.out.println("pairNum1이 pairNum2 보다 크다.");
 			} else {
 				System.out.println("pairNum1이 pairNum2 보다 작다.");
 			}
 		}
-		
+
 	}
 }
