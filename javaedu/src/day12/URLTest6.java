@@ -15,6 +15,7 @@ public class URLTest6 {
 			DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
 			Document document = documentBuilder.parse("http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1171062000");
+			
 			System.out.println(document.getElementsByTagName("title").item(0).getTextContent());
 			NodeList nameList = document.getElementsByTagName("wfKor");
 			Node name = nameList.item(0);

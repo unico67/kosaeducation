@@ -17,7 +17,8 @@ public class URLTest2 {
 		try {
 			URL req = new URL("http://img.etnews.com/news_ebuzz/afieldfile/2012/01/04/c_bk010101_87984_3.jpg");
 			InputStream is = req.openStream();
-			FileOutputStream fos = new FileOutputStream("c:/iotest/duke.jpg");
+			String fileName = "c:/iotest/duke.jpg";
+			FileOutputStream fos = new FileOutputStream(fileName);
 			int input = 0;
 			while (true) {
 				input = is.read();
@@ -26,7 +27,9 @@ public class URLTest2 {
 				fos.write(input);
 			}
 			fos.close();
-			System.out.println("duke.jpg가 성공적으로 생성되었습니다.");
+			System.out.println("duke.jpg가 성공적으로 저장되었습니다.");
+			Runtime.getRuntime().exec("C:\\Program Files (x86)\\Google\\Chrome\\Application"
+					+ "\\chrome.exe "+fileName);
 		} catch (MalformedURLException e) {
 			System.out.println("URL문자열 오류 : " + e.getMessage());
 		} catch (IOException e) {

@@ -2,9 +2,8 @@ package day12;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-
-
 class StepDTO implements Serializable{
+	private static final long serialVersionUID = -9060430121447664088L;
 	private String stepId;
 	transient private String password;
 	private int age;

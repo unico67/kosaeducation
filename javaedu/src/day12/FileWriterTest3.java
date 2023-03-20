@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 public class FileWriterTest3 {
 	public static void main(String args[]) {
 		try (PrintWriter writer = new PrintWriter("c:/iotest/output3.txt");) {
-			char arr[] = { '객', '체', '지', '향', '언', '어', 'J', 'a', 'v', 'a' };
+			char arr[] = { '객', '체', '지', '향', '언', '어', ' ',  'J', 'a', 'v', 'a' };
 			for (int cnt = 0; cnt < arr.length; cnt++)
 				writer.print(arr[cnt]);
 			writer.println();
