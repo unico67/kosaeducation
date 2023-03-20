@@ -6,7 +6,6 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.Period;
 import java.time.format.TextStyle;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -17,6 +16,7 @@ public class DateTimeTest {
 	public static void main(String[] args) throws Exception {
 		Date d = new Date();
 		System.out.println(d.toString());
+		System.out.println(d.getTime());
 
 		GregorianCalendar gc = new GregorianCalendar();
 		System.out.println(gc.get(GregorianCalendar.DAY_OF_WEEK));

@@ -5,9 +5,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser; 
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class URLTest8 {
 
@@ -17,25 +16,32 @@ public class URLTest8 {
 					"http://openapi.seoul.go.kr:8088/796143536a756e69313134667752417a/json/LampScpgmtb/1/100/");
 
 			InputStream is = req.openStream();
-			BufferedReader br = new BufferedReader(new InputStreamReader(is));	
-
+			BufferedReader br = new BufferedReader(new InputStreamReader(is));
+			StringBuffer bf = new StringBuffer();
+			String line;
+			while (true) {
+				line = br.readLine();
+				if (line == null)
+					break;
+				bf.append(line);
+			}
+			
 			JSONObject obj = null;
-			JSONParser parser = new JSONParser();
-
+			
 			try {
-				obj = (JSONObject) parser.parse(br);
+				obj = new JSONObject(bf.toString());
 			} catch (Exception e) {
 				System.out.println("파싱 오류");
 				e.printStackTrace();
 			}
 
-			System.out.println(obj.toJSONString());
+			System.out.println(obj.toString());
 			System.out.println(obj.keySet());
-			JSONObject lamp = (JSONObject)obj.get("LampScpgmtb");
-			JSONArray row = (JSONArray)lamp.get("row");
+			JSONObject lamp = obj.getJSONObject("LampScpgmtb");
+			JSONArray row = lamp.getJSONArray("row");
 			
 			for(Object e : row) {
-				System.out.println(((JSONObject)e).get("CLS_NM"));
+				System.out.println(((JSONObject)e).getString("CLS_NM"));	
 			}	
 		} catch (Exception e) {
 			System.out.println("오류 : " + e.getMessage());

@@ -9,9 +9,9 @@ public class EqualsTest1 {
 		String s3 = new String("가나다");
 		String s4 = new String("가나다");
 
-		System.out.println(s1 == s2);
-		System.out.println(s3 == s4);
-		System.out.println(s3.equals(s4));
+		System.out.println(s1 == s2);		// true
+		System.out.println(s3 == s4);		// false
+		System.out.println(s3.equals(s4));	// true	
 		
 		Scanner scan = new Scanner(System.in);
 		System.out.print("문자열 입력 : ");

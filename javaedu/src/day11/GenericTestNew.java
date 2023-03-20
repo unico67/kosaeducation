@@ -9,7 +9,7 @@ public class GenericTestNew {
 		// 타입 파라미터라는 것을 사용한다.
 		LinkedList<String> list = new LinkedList<>(); // 타입파라미터
 		list.add("java");
-		list.add("100");
+		//list.add(100);
 		list.add("servlet");
 		list.add("jdbc");
 

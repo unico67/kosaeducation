@@ -15,6 +15,13 @@ public class StringBufferTest {
         buffer.append(str);
         buffer.append(str);
         System.out.printf("%s\n", buffer);
+        
+        StringBuffer bf1 = new StringBuffer("가나다");
+        StringBuffer bf2 = new StringBuffer();
+        bf2.append("가나다");
+        System.out.printf("%b\n", bf1.equals(bf2));
+        System.out.printf("%b\n", bf1 == bf2);
+        System.out.printf("%b\n", bf1.toString().equals(bf2.toString()));
 	}
 }
 
