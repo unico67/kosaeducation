@@ -16,7 +16,8 @@ class Member2 {
 			return true;
 		if (o != null && o instanceof Member2) {
 			Member2 m = (Member2) o;
-			if (id == m.id && name.equals(m.name) && password.equals(m.password))
+			if (id == m.id && name.equals(m.name) && 
+					password.equals(m.password))
 				return true;
 		}
 		return false;

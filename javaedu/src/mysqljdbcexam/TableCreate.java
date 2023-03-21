@@ -16,9 +16,9 @@ public class TableCreate {
 		Connection conn = null;
 		Statement stmt = null;
 		try {
-			String url = "jdbc:mysql://localhost:3306/jdbcdb?characterEncoding=UTF-8&serverTimezone=UTC";
-			String user = "root";
-			String passwd = "1234";
+			String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
+			String user = "jdbctest";
+			String passwd = "jdbctest";
 			conn = DriverManager.getConnection(url, user, passwd);	
 			System.out.println("데이터베이스에 접속했습니다.");
 			stmt = conn.createStatement();		

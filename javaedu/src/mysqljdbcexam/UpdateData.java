@@ -14,9 +14,9 @@ public class UpdateData {
 			System.out.println("해당 클래스를 찾을 수 없습니다." + cnfe.getMessage());
 			return;
 		} 
-		String url = "jdbc:mysql://localhost:3306/jdbcdb?characterEncoding=UTF-8&serverTimezone=UTC";
-		String user = "root";
-		String passwd = "1234";
+		String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
+		String user = "jdbctest";
+		String passwd = "jdbctest";
 		try (Connection conn = DriverManager.getConnection(url, user, passwd);
 				PreparedStatement pstmt = conn.prepareStatement("update student set score = ? where name = ?");
 				Scanner scan = new Scanner(System.in);){
