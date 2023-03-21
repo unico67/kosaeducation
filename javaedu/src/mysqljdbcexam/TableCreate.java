@@ -1,4 +1,4 @@
-package mysqljdbcexam;
+package mysqljdbcexam; 
 
 import java.sql.Connection;
 import java.sql.DriverManager;
