@@ -1,14 +1,14 @@
-package jdbcexam;
+package day14;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 public class VisitorList {
 	public static void main(String[] args) throws Exception {
-		Class.forName("oracle.jdbc.OracleDriver");
-		Connection conn = DriverManager.getConnection(
-				                  "jdbc:oracle:thin:@localhost:1521:XE",
-				                  "scott", "tiger");
+		String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
+		String user = "jdbctest";
+		String passwd = "jdbctest";
+		Connection conn = DriverManager.getConnection(url,user,passwd);
 		Statement stmt = conn.createStatement();
 		String sql = "SELECT id, name, writedate, memo FROM visitor";
 		ResultSet rs = stmt.executeQuery(sql);		

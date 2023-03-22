@@ -1,4 +1,4 @@
-package jdbcexam;
+package day14;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,11 +11,10 @@ public class VisitorList2 {
 		Statement stmt = null;
 		ResultSet rs = null;
 		try {
-			Class.forName("oracle.jdbc.OracleDriver");
-			String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE";
-			String user = "scott";
-			String passwd = "tiger";
-			conn = DriverManager.getConnection(jdbcUrl, user, passwd);
+			String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
+			String user = "jdbctest";
+			String passwd = "jdbctest";
+			conn = DriverManager.getConnection(url,user,passwd);
 			stmt = conn.createStatement();
 			String sql = "SELECT id, name, writedate, memo FROM visitor";
 			rs = stmt.executeQuery(sql);

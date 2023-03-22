@@ -1,20 +1,15 @@
-package jdbcexam;
+package day14;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 public class VisitorList4 {
 	public static void main(String[] args) {
-		try {
-			Class.forName("oracle.jdbc.OracleDriver");
-		} catch(ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		String sql = "SELECT id, name, writedate, memo FROM visitor WHERE id = 10"; 
-		String jdbcUrl = "jdbc:oracle:thin:@localhost:1521:XE";
-		String user = "scott";
-		String passwd = "tiger";
-		try (Connection conn = DriverManager.getConnection(jdbcUrl, user, passwd);
+		String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
+		String user = "jdbctest";
+		String passwd = "jdbctest";
+		String sql = "SELECT id, name, writedate, memo FROM visitor";
+		try (Connection conn = DriverManager.getConnection(url, user, passwd);
 				Statement stmt = conn.createStatement();			
 				ResultSet rs = stmt.executeQuery(sql);) {			
 			if(rs.next() ) {				

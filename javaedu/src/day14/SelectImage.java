@@ -1,4 +1,4 @@
-package mysqljdbcexam;
+package day14;
 
 import java.io.File;
 import java.io.FileOutputStream;

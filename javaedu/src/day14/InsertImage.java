@@ -1,4 +1,4 @@
-package mysqljdbcexam;
+package day14;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
