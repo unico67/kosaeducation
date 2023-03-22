@@ -28,7 +28,7 @@ public class URLTest2 {
 			}
 			fos.close();
 			System.out.println("duke.jpg가 성공적으로 저장되었습니다.");
-			Runtime.getRuntime().exec("C:\\Program Files (x86)\\Google\\Chrome\\Application"
+			Runtime.getRuntime().exec("C:\\Program Files\\Google\\Chrome\\Application"
 					+ "\\chrome.exe "+fileName);
 		} catch (MalformedURLException e) {
 			System.out.println("URL문자열 오류 : " + e.getMessage());

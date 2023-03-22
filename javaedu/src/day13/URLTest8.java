@@ -26,14 +26,7 @@ public class URLTest8 {
 				bf.append(line);
 			}
 			
-			JSONObject obj = null;
-			
-			try {
-				obj = new JSONObject(bf.toString());
-			} catch (Exception e) {
-				System.out.println("파싱 오류");
-				e.printStackTrace();
-			}
+			JSONObject obj = new JSONObject(bf.toString());
 
 			System.out.println(obj.toString());
 			System.out.println(obj.keySet());

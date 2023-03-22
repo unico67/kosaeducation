@@ -3,7 +3,6 @@ package day13;
 enum Season {
 	SPRING, SUMMER, FALL, WINTER
 }
-
 public class EnumTest1 {
 	public static void main(String args[]) {
 		System.out.println(Season.SPRING);

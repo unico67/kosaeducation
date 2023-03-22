@@ -3,6 +3,7 @@ package day6;
 import java.io.Serializable;
 
 public class Student2 implements Serializable{
+	private static final long serialVersionUID = 1L;
 	String name;
 	int age;
 	String subject;
