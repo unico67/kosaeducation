@@ -1,4 +1,4 @@
-package day14; 
+package day15; 
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -22,7 +22,7 @@ public class TableCreate {
 			conn = DriverManager.getConnection(url, user, passwd);	
 			System.out.println("데이터베이스에 접속했습니다.");
 			stmt = conn.createStatement();		
-			stmt.executeUpdate("create table student (name varchar(10), score int)");
+			stmt.executeUpdate("create table student (name varchar(15) primary key, score int)");
 			System.out.println("student 테이블 생성");						
 		} catch (SQLException se1) {
 			System.out.println(se1);

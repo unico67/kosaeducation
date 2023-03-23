@@ -1,4 +1,4 @@
-package day14;
+package day15;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class SelectData3 {
+public class SelectData5 {
 	public static void main(String[] args) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -33,6 +33,7 @@ public class SelectData3 {
 			} else 			
 				 System.out.println("점수가 " + score + " 이상인 학생은 존재하지 않습니다.");
 			 System.out.println("수행 종료...");
+			 rs.close();
 		} catch (SQLException se) {
 			System.out.println(se.getMessage());
 		}

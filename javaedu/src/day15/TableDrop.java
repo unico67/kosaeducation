@@ -1,11 +1,11 @@
-package day14;
+package day15;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class InsertData1 {
+public class TableDrop {
 	public static void main(String[] args) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -22,12 +22,8 @@ public class InsertData1 {
 			conn = DriverManager.getConnection(url, user, passwd);	
 			System.out.println("데이터베이스에 접속했습니다.");
 			stmt = conn.createStatement();		
-			stmt.executeUpdate("insert into student values ('둘리', 100)");
-			stmt.executeUpdate("insert into student values ('또치', 90)");
-			stmt.executeUpdate("insert into student values ('도우너', 95)");
-			stmt.executeUpdate("insert into student values ('희동이', 80)");
-			stmt.executeUpdate("insert into student values ('마이콜', 85)");
-			System.out.println("student 테이블에 데이터 삽입 완료");						
+			stmt.executeUpdate("drop table student");
+			System.out.println("student 테이블 제거");						
 		} catch (SQLException se1) {
 			System.out.println(se1.getMessage());
 		} finally {

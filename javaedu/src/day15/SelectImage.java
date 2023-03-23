@@ -1,4 +1,4 @@
-package day14;
+package day15;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -23,14 +23,15 @@ public class SelectImage {
 		String passwd = "jdbctest";
 		try (Connection conn = DriverManager.getConnection(url, user, passwd);
 				Scanner scan = new Scanner(System.in);
-				PreparedStatement pstmt = conn.prepareStatement("SELECT filename, filecontent FROM imgtest WHERE filename = ?");) {
-			System.out.print("읽으려는 이미지의 파일명(확장자제외)을 입력하세요 : ");
+				PreparedStatement pstmt = conn.prepareStatement("SELECT filename, imgcontent FROM imgtest WHERE filename = ?");) {
+			System.out.print("읽으려는 이미지의 파일명을 입력하세요 : ");
 			String name = scan.nextLine();
 			pstmt.setString(1, name);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
-				File imgFile = new File("c:/Temp/"+rs.getString("filename")+new Date().getTime()+".png");
-				InputStream is = rs.getBinaryStream("filecontent");
+				String imgName[] = rs.getString("filename").split("\\.");	
+				File imgFile = new File("c:/Temp/"+imgName[0]+new Date().getTime()+"."+imgName[1]);
+				InputStream is = rs.getBinaryStream("imgcontent");
 				FileOutputStream fos = new FileOutputStream(imgFile);
 				byte[] b = new byte[2048];
 				int n;

@@ -1,4 +1,4 @@
-package day14;
+package day15;
 import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -18,16 +18,15 @@ public class InsertImage {
 		String passwd = "jdbctest";
 		try (Connection conn = DriverManager.getConnection(url, user, passwd);
 				Scanner scan = new Scanner(System.in);
-				PreparedStatement pstmt = conn.prepareStatement("INSERT INTO imgtest (filename, filecontent) VALUES (?, ?)")){
+				PreparedStatement pstmt = conn.prepareStatement("INSERT INTO imgtest (filename, imgcontent) VALUES (?, ?)")){
 			System.out.print("저장할 이미지 파일명을 절대 패스로 입력하세요 : ");
 			String name = scan.nextLine();
 			File imgFile = new File(name);
 			if (imgFile.exists()) {
-				int pointIndex = imgFile.getName().indexOf('.');
-				String imgName = imgFile.getName().substring(0, pointIndex);
-				System.out.println(imgFile.getName().substring(0, pointIndex));
+				//int pointIndex = imgFile.getName().indexOf('.');
+				//String imgName = imgFile.getName().substring(0, pointIndex);				
 				FileInputStream fin = new FileInputStream(imgFile); 
-				pstmt.setString(1, imgName); 
+				pstmt.setString(1, imgFile.getName()); 
 				pstmt.setBinaryStream(2, fin, (int)imgFile.length());
 				pstmt.executeUpdate(); 
 				System.out.println("이미지 삽입 성공");
