@@ -23,8 +23,6 @@ public class InsertImage {
 			String name = scan.nextLine();
 			File imgFile = new File(name);
 			if (imgFile.exists()) {
-				//int pointIndex = imgFile.getName().indexOf('.');
-				//String imgName = imgFile.getName().substring(0, pointIndex);				
 				FileInputStream fin = new FileInputStream(imgFile); 
 				pstmt.setString(1, imgFile.getName()); 
 				pstmt.setBinaryStream(2, fin, (int)imgFile.length());

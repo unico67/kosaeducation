@@ -7,12 +7,7 @@ import java.sql.Statement;
 
 public class TableCreate {
 	public static void main(String[] args) {
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-		} catch (ClassNotFoundException cnfe) {
-			System.out.println("해당 클래스를 찾을 수 없습니다." + cnfe.getMessage());
-			return;
-		} 
+		
 		Connection conn = null;
 		Statement stmt = null;
 		try {
