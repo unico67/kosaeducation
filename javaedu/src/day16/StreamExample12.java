@@ -2,7 +2,7 @@ package day16;
 
 import java.util.Arrays;
 
-public class AggregateExample {
+public class StreamExample12 {
 	public static void main(String[] args) {
 		// 정수 배열
 		int[] arr = { 1, 2, 3, 4, 5 };

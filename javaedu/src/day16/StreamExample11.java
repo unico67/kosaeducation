@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class CollectExample2 {
+public class StreamExample11 {
 	public static void main(String[] args) {
 		List<Student2> totalList = new ArrayList<>();
 		totalList.add(new Student2("홍길동", "남", 92));

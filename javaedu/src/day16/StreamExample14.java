@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class StreamPipeLineExample2 {
+public class StreamExample14 {
 
 	public static void main(String[] args) {
 		List<String> strList = Arrays.asList("3", "1", "4", "2", "5", "5");

@@ -20,7 +20,7 @@ public class LambdaTest3 {
 
 		System.out.println(max2.getMax(100, 300));
 
-		MyNumber max3 = (int x, int y) -> (x >= y) ? x : y;
+		MyNumber max3 = (x, y) -> (x >= y) ? x : y;
 
 		System.out.println(max3.getMax(100, 300));
 	}

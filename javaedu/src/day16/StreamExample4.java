@@ -9,5 +9,8 @@ public class StreamExample4 {
 		IntStream stream = IntStream.rangeClosed(1, 100);
 		stream.forEach(a -> sum += a);
 		System.out.println("총합: " + sum);
+		
+		stream = IntStream.rangeClosed(1, 100);
+		stream.forEach(System.out::println);
 	}
 }

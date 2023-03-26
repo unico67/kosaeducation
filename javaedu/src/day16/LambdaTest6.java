@@ -7,9 +7,7 @@ interface MyFunctionalInterface2 {
 
 public class LambdaTest6 {
 	public static void main(String[] args) {
-		MyFunctionalInterface2 fi;
-
-		fi = (x) -> {
+		MyFunctionalInterface2 fi = (x) -> {
 			System.out.println(x);
 		};
 		fi.method2(2);

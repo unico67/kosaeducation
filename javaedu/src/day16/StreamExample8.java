@@ -3,7 +3,7 @@ package day16;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FilteringExample {
+public class StreamExample8 {
 	public static void main(String[] args) {
 		// List 컬렉션 생성
 		List<String> list = new ArrayList<>();
@@ -16,7 +16,7 @@ public class FilteringExample {
 		list.add("도우너");
 
 		// 중복 요소 제거
-		list.stream().distinct().forEach(n -> System.out.println(n));
+		list.stream().distinct().forEach(System.out::println);
 		System.out.println();
 
 		// 신으로 시작하는 요소만 필터링

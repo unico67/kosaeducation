@@ -22,5 +22,7 @@ public class LambdaTest2 {
 		exec((int a, int b) -> {
 			return a + b;
 		});
+		
+		exec((a, b) -> a*a + b*b);
 	}
 }

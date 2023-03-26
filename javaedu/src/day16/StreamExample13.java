@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class StreamPipeLineExample1 {
+public class StreamExample13 {
 	public static void main(String[] args) {
 		List<Student> list = Arrays.asList(new Student("둘리", 10), new Student("또치", 20), new Student("도우너", 30));
 
