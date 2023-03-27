@@ -1,4 +1,5 @@
 package day16;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -6,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class SelectBookLab1 {
+public class SelectBookLab4 {
 	public static void main(String[] args) {
 		String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
 		String user = "jdbctest";
@@ -15,7 +16,7 @@ public class SelectBookLab1 {
 		start: try(Connection conn = DriverManager.getConnection(url, user, passwd);
 				Statement stmt = conn.createStatement();
 				Scanner scan = new Scanner(System.in);) {
-			while(true) {
+				while(true) {
 				System.out.print("1. 모두 출력하기\n"
 						+ "2. 가격이 높은 순으로 출력하기\n"
 						+ "3. 20000 이상의 도서들만 출력하기 \n"
@@ -87,8 +88,7 @@ public class SelectBookLab1 {
 						System.out.println("y와 n 둘 중 하나를 눌러주세요");
 						System.out.println("(y는 계속하기 n은 그만하기 입니다.)");
 					}
-				}
-				
+				}				
 			}					
 		} catch (SQLException se1) {
 			System.out.println("오류발생");

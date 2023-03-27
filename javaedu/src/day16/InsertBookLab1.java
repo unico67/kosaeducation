@@ -1,12 +1,10 @@
 package day16;
 
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Scanner;
-
 public class InsertBookLab1 {
 	public static void main(String[] args) {
 		String url = "jdbc:mysql://localhost:3306/edudb?characterEncoding=UTF-8&serverTimezone=UTC";
@@ -53,8 +51,7 @@ public class InsertBookLab1 {
 						System.out.println("y와 n 둘 중 하나를 눌러주세요");
 						System.out.println("(y는 계속하기 n은 그만하기 입니다.)");
 					}
-				}
-				
+				}				
 			}					
 		} catch (SQLException se1) {
 			System.out.println("오류발생");

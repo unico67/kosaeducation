@@ -20,7 +20,7 @@ public class ThreadEx19 {
 
 
 class ShareThread1 extends Thread {
-	List<Character> buffer = null;
+	List<Character> buffer = null; 
 
 	ShareThread1(List<Character> buffer) {
 		this.buffer = buffer;
