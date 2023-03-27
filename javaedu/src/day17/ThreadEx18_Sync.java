@@ -1,12 +1,5 @@
 package day17;
 
-/*
-실행순서의 동기화처리
- : 쓰레드의 실행순서를 정의 하고 반드시 따르도록 하는것
- 
- ex) A쓰레드의 처리가 완료된후 B쓰레드가 처리되도록 하는 경우
- 형식) 접근지정자 synchronized 메서드명(){  }
- */
 class FamilyThread2 extends Thread {
 	private Washroom2 wr;
 	private String who;
@@ -26,7 +19,6 @@ class FamilyThread2 extends Thread {
 	}
 }
 
-//------------------------------------------------------------
 class Washroom2 {
 	public synchronized void openDoor(String name) throws InterruptedException {
 		System.out.println(name + "님이 입장");
@@ -40,7 +32,6 @@ class Washroom2 {
 	}
 }
 
-//-----------------------------------------------------------
 public class ThreadEx18_Sync {
 	public static void main(String[] args) {
 		Washroom2 wr = new Washroom2();
