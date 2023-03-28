@@ -1,4 +1,4 @@
-package day14;
+package lamdalab;
 
 import java.util.ArrayList;
 import java.util.Collections;
