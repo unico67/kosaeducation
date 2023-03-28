@@ -14,7 +14,7 @@ public class LambdaTest12 {
 	}
 
 	public static void Test2(FuncExpression<String> func) {
-		String ret = func.exec("hello world");
+		String ret = func.exec("hello world", "abc", "java", "jdbc");
 		System.out.println(ret);
 	}
 
@@ -36,6 +36,10 @@ public class LambdaTest12 {
 		Test2((Object... data) -> {
 			System.out.println(data[0]);
 			return "OK2";
+		});
+		
+		Test2((data) -> {			
+			return String.valueOf(data.length);
 		});
 	}
 }
