@@ -1,12 +1,8 @@
-package lamdalab;
-/*
-구현 클래스명 : 제시된 패키지의 소스들을 수정하고 패키지를 압축하여 제출한다.
-                   (소스는 3개)
+package lamdalabold;
 
-소스를 보고 람다식으로 변경 가능하다고 판단되는 부분은 변경하여 제출한다. 소스 3개 모두~~~
- */
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import day6.Book;
 public class AnnonyInnerLab {
 	public static void main(String[] args) {
@@ -21,7 +17,13 @@ public class AnnonyInnerLab {
 			System.out.println(el.getBookInfo());
 		}
 
-		Collections.sort(al, (b1, b2)->(b1.getPrice() - b2.getPrice()));
+		Collections.sort(al, new Comparator<Book>() {
+				@Override
+				public int compare(Book o1, Book o2) {
+						return o1.getPrice() - o2.getPrice();					
+				}
+			}
+		);
 		System.out.println("[소팅 후 ]");
 		for (Book el : al) {
 			System.out.println(el.getBookInfo());

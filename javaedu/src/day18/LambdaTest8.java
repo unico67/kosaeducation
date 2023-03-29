@@ -14,11 +14,6 @@ public class LambdaTest8 {
 		};
 		System.out.println(fi.method4());
 
-		fi = () -> {
-			return new Date();
-		};
-		System.out.println(fi.method4());
-
 		fi = () -> new Date();
 		System.out.println(fi.method4());
 

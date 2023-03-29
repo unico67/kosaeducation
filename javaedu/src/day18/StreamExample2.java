@@ -15,7 +15,7 @@ public class StreamExample2 {
 
 		// 객체 스트림 얻기
 		Stream<Product> stream = list.stream();
-		stream.forEach(p -> System.out.println(p));
+		stream.forEach(p -> System.out.println(p.getName()));
 		System.out.println("-----------------------------------------------------");
 		stream = list.stream();
 		stream.forEach(System.out :: println);

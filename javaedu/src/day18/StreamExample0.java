@@ -21,6 +21,8 @@ public class StreamExample0 {
 		// 스트림 사용(O)
 		Stream<String> stream = list.stream();
 		stream.forEach(name -> System.out.println(name));
+		stream = list.stream();
+		stream.forEach(System.out::println);
 	}
 
 }
