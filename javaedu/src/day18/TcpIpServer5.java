@@ -1,22 +1,22 @@
 package day18;
-
 import java.net.*;
 import java.io.*;
 import java.util.Scanner;
 
 public class TcpIpServer5 {
+
 	public static void main(String args[]) {
 		ServerSocket serverSocket = null;
 		Socket socket = null;
 
 		try {
-			// 서버소켓을 생성하여 8888번 포트와 결합(bind)시킨다.
+			// 서버소켓을 생성하여 7777번 포트와 결합(bind)시킨다.
 			serverSocket = new ServerSocket(8888);
-			System.out.println("서버가 준비되었습니다.");
- 
-			socket = serverSocket.accept();
+			System.out.println("[ 메시지 송수신 서버가 준비되었습니다. ]");
 
-			Sender   sender   = new Sender(socket);
+			socket = serverSocket.accept();		
+
+			Sender sender = new Sender(socket);
 			Receiver receiver = new Receiver(socket);
 
 			sender.start();
@@ -35,10 +35,10 @@ class Sender extends Thread {
 	Sender(Socket socket) {
 		this.socket = socket;
 		try {
-			out = new OutputStreamWriter(socket.getOutputStream());
-			name = "["+socket.getInetAddress()+":"+socket.getPort()+"]";
+			out = new OutputStreamWriter(socket.getOutputStream(), "UTF-8");			
+			name = "[수신]";
 		} catch(Exception e) {
-			System.out.println("1"+e);
+			e.printStackTrace();
 		}
 	}
 
@@ -46,10 +46,11 @@ class Sender extends Thread {
 		Scanner scanner = new Scanner(System.in);
 		while(out!=null) {
 			try {
-				out.write(name+scanner.nextLine());		
+				out.write(name+scanner.nextLine()+"\r\n");		
+				out.flush();
 			} catch(IOException e) {
-				System.out.println("3"+e);
-			}
+			e.printStackTrace();
+		}
 		}
 		scanner.close();
 	} 
@@ -57,23 +58,23 @@ class Sender extends Thread {
 
 class Receiver extends Thread {
 	Socket socket;
-	InputStreamReader in;
+	BufferedReader in;
+
 	Receiver(Socket socket) {
 		this.socket = socket;
 		try {
-			in = new InputStreamReader(socket.getInputStream());
+			in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
 		} catch(IOException e) {
-			System.out.println("2"+e);
+			e.printStackTrace();
 		}
 
 	}
+
 	public void run() {
 		while(in!=null) {
 			try {
-				System.out.println(in.read());
-			} catch(IOException e) {
-				System.out.println("4"+e);
-			}
+				System.out.println(in.readLine());
+			} catch(IOException e) {}
 		}
-	} 
+	} // run
 }

@@ -14,12 +14,11 @@ public class TcpIpMultichatClient {
 			System.out.println("USAGE: java TcpIpMultichatClient 대화명");
 			System.exit(0);
 		}
-
 		try {
 			String serverIp = "127.0.0.1";
 			// 소켓을 생성하여 연결을 요청한다.
-			Socket socket = new Socket(serverIp, 7777);
-			System.out.println("서버에 연결되었습니다.");
+			Socket socket = new Socket(serverIp, 8888);
+			System.out.println("[ 서버에 연결되었습니다. ]");
 			Thread sender = new ClientSender(socket, args[0]);
 			Thread receiver = new ClientReceiver(socket);
 			sender.start();
@@ -27,6 +26,7 @@ public class TcpIpMultichatClient {
 		} catch (ConnectException ce) {
 			ce.printStackTrace();
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -38,7 +38,7 @@ public class TcpIpMultichatClient {
 		ClientSender(Socket socket, String name) {
 			this.socket = socket;
 			try {
-				out = new OutputStreamWriter(socket.getOutputStream());
+				out = new OutputStreamWriter(socket.getOutputStream(), "UTF-8");
 				this.name = name;
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -49,11 +49,11 @@ public class TcpIpMultichatClient {
 			try {
 				Scanner scanner = new Scanner(System.in);
 				if (out != null) {
-					out.write(name+"\\n");
+					out.write(name+"\r\n");
 					out.flush();
 				}
 				while (out != null) {
-					out.write("[" + name + "]" + scanner.nextLine());
+					out.write("[" + name + "]" + scanner.nextLine()+"\r\n");
 					out.flush();
 				}
 				scanner.close();
@@ -72,6 +72,7 @@ public class TcpIpMultichatClient {
 			try {
 				in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
 			} catch (IOException e) {
+				e.printStackTrace();
 			}
 		}
 
@@ -80,6 +81,7 @@ public class TcpIpMultichatClient {
 				try {
 					System.out.println(in.readLine());
 				} catch (IOException e) {
+					e.printStackTrace();
 				}
 			}
 		}

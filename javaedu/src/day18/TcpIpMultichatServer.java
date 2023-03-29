@@ -24,8 +24,8 @@ public class TcpIpMultichatServer {
 		Socket socket = null;
 
 		try {
-			serverSocket = new ServerSocket(7777);
-			System.out.println("챗서버가 시작되었습니다.");
+			serverSocket = new ServerSocket(8888);
+			System.out.println("[ 챗서버가 시작되었습니다. ]");
 
 			while (true) {
 				socket = serverSocket.accept();
@@ -43,8 +43,8 @@ public class TcpIpMultichatServer {
 		while (it.hasNext()) {
 			OutputStreamWriter out = clients.get(it.next());
 			try {
-				out.write(msg);
-				//out.flush();
+				out.write(msg+"\r\n");
+				out.flush();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -64,10 +64,7 @@ public class TcpIpMultichatServer {
 			this.socket = socket;
 			try {
 				in = new BufferedReader(new InputStreamReader(socket.getInputStream(), "UTF-8"));
-				out = new OutputStreamWriter(socket.getOutputStream());
-				out.write("환영");
-				System.out.println(out);
-				//out.flush();
+				out = new OutputStreamWriter(socket.getOutputStream(), "UTF-8");				
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -86,10 +83,10 @@ public class TcpIpMultichatServer {
 					sendToAll(in.readLine());
 				}
 			} catch (IOException e) {
-				e.printStackTrace();
+				//e.printStackTrace();
 			} finally {
-				sendToAll("#" + name + "님이 나가셨습니다.");
 				clients.remove(name);
+				sendToAll("#" + name + "님이 나가셨습니다.");
 				System.out.println("[" + socket.getInetAddress() + ":" + socket.getPort() + "]" + "에서 접속을 종료하였습니다.");
 				System.out.println("현재 서버접속자 수는 " + clients.size() + "입니다.");
 			}
