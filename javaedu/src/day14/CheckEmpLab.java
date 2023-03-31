@@ -33,7 +33,6 @@ public class CheckEmpLab {
 					System.out.println(input + "직원은 근무하지 않습니다.");
 				}
 				System.out.println("계속 검토하시겠습니까? >> (no)");
-				// sc = new Scanner(System.in);
 				input = sc.next();
 				if (Objects.equals(input, "no")) {
 					break;

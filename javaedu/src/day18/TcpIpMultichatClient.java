@@ -12,7 +12,7 @@ public class TcpIpMultichatClient {
 	public static void main(String args[]) {
 		if (args.length != 1) {
 			System.out.println("USAGE: java TcpIpMultichatClient 대화명");
-			System.exit(0);
+			return;
 		}
 		try {
 			String serverIp = "127.0.0.1";

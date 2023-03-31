@@ -29,7 +29,7 @@ public class TcpIpServer {
 				OutputStreamWriter osw = new OutputStreamWriter(out);
 
 				// 원격 소켓(remote socket)에 데이터를 보낸다.
-				osw.write("[서버로부터의 공지] 어서요세용... 즐거운 수요일입니다.....");
+				osw.write("[서버로부터의 공지] 어서요세용... 즐거운 목요일입니다.....");
 				System.out.println(getTime()+"데이터를 전송했습니다.");
 
 				// 스트림과 소켓을 닫아준다.

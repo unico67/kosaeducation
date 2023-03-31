@@ -46,7 +46,7 @@ class Sender extends Thread {
 		Scanner scanner = new Scanner(System.in);
 		while(out!=null) {
 			try {
-				out.write(name+scanner.nextLine()+"\r\n");		
+				out.write(name+scanner.nextLine()+"\r\n"); // \n
 				out.flush();
 			} catch(IOException e) {
 			e.printStackTrace();
