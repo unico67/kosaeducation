@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <h2>ES6에서 추가된 구문들(2)</h2>
+    <hr>
+    <script src="util.js"></script>
+    <script>
+        var jsname = "자바스크립트";
+        // 기존 코드
+        console.log("이건 " + jsname + "입니다.");
+
+        // 템플릿 리터럴 방식(` 기호는 백틱 기호입니다.)
+        console.log(`이건 ${jsname}입니다.`);
+
+        // 출력 결과 -> 이건 자바스크립트입니다.
+        writeColor("이건 " + jsname + "입니다.", "h3", "red");
+        writeColor(`이건 ${jsname}입니다.`, "h3", "green");
+
+        const introduce = { name: 'unico', age: 23 };
+        hr();
+        // key와 같은 이름으로 변수 선언
+        const { name, age } = introduce;
+        writeColor(name, "h3", "pink"); // unico
+        writeColor(age, "h3", "lime"); // 23
+        hr()
+        // 다른 이름으로 변수 선언 -> 변수이름: 키값
+        const { name: myName, age: myAge } = introduce;
+
+        writeColor(myName, "h3", "orange"); // unico
+        writeColor(myAge, "h3", "blue"); // 23
+        //배열에서 값을 꺼낼 때는 대괄호를 사용해서 앞에서부터 순차적으로 꺼내올 수 있다.
+        const fruits = ['apple', 'mango', 'grape'];
+        // 앞에서부터 순차적으로 변수 선언 가능
+        const [zero, one, two] = fruits;
+
+        writeColor(zero, "h3", "magenta"); // apple
+        hr();
+        function func1(...args) {
+            writeColor(`아규먼트 갯수: ${args.length}`, "h3", "lime");
+            writeColor(`아규먼트 내용: [${args}]`, "h3", "skyblue");
+        }
+        func1(1, 2, 3, 4, 5);
+        func1(1, 2, 3, 4, 5, 6, 7, 8);
+        func1('가나다', 'ABC', 100, true);
+        hr();
+        function func2(...nums) {
+            let result1 = nums.map(function (item) {
+                return item * 100;
+            });
+            let result2 = nums.reduce(function (exprvalue, item) {
+                return exprvalue + item;
+            });
+            let result3 = nums.forEach(function (item) {
+                item % 2 && writeColor(`${item} 은 홀수`, "h4", "red");
+                item % 2 || writeColor(`${item} 은 짝수`, "h4", "red");
+                return item;
+            });
+            writeColor(`결과1: ${result1}`, "h3", "magenta");
+            writeColor(`결과2: ${result2}`, "h3", "magenta");
+            writeColor(`결과3: ${result3}`, "h3", "magenta");
+        }
+        hr();
+        func2(1, 2, 3, 4, 5);
+        func2(1, 2, 3, 4, 5, 6, 7, 8);
+        hr();
+        function func3(a = 10, b = 20, c = 30) {
+            return a + b + c;
+        }
+        writeColor(`${func3()}`, "h3", "brown");
+        writeColor(`${func3(1, 2, 3)}`, "h3", "brown");
+        writeColor(`${func3(100)}`, "h3", "brown");
+    </script>
+</body>
+
+</html>

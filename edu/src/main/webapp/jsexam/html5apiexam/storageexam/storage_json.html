@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>local Storage 객체저장</title>
+<script src="http://code.jquery.com/jquery-1.7.js"></script>
+<script>
+window.onload=function(){
+ $('#stg_save').click(fn_stg_save);
+ $('#stg_search').click(fn_stg_search);
+ $('#stg_remove').click(fn_stg_remove);
+ 
+}
+function fn_stg_save(){
+ var key = $('#stg_key').val();
+ var value = $('#stg_value').val();
+ 
+ var ui = new UserInfo(key,value);
+ var ui_string = JSON.stringify(ui); 
+ alert("입력된 키와 값을 JSON 형식으로 저장 : " + ui_string);
+ 
+ localStorage.setItem('userinfo',ui_string);  // localStorage 에 ui 객체를 저장한다.
+ 
+ $('#stg_key').val('');  // 입력값 삭제
+ $('#stg_value').val('');    // 입력값 삭제 
+}
+ 
+// UserInfo 클래스 양식
+function UserInfo(key,value) {
+ this.mykey = key;
+ this.myvalue = value; 
+}
+ 
+function fn_stg_search(){
+ var ui_string = localStorage.getItem('userinfo');
+ var ui_obj = JSON.parse(ui_string);
+ 
+ $('#stg_key').val(ui_obj.mykey);  
+ $('#stg_value').val(ui_obj.myvalue);    
+}
+function fn_stg_remove(){
+   localStorage.removeItem('userinfo');
+   $('#stg_key').val('');  
+   $('#stg_value').val('');    
+}
+</script>
+</head>
+<body>
+<form action="">
+<fieldset>
+ <legend>로컬스토리지 및 JSON 을 이용한 객체 처리 테스트</legend>
+ <label>키: </label>
+ <input type="text" id="stg_key"><br>
+ <label>값: </label>
+ <input type="text" id="stg_value"><br>
+ 
+ <br />
+ <input type="button" value="저장" id="stg_save">
+ <input type="button" value="검색" id="stg_search">
+ <input type="button" value="삭제" id="stg_remove">
+ 
+</fieldset>
+</form>
+</body>
+</html>
