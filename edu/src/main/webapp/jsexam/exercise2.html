@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise2</title>
+    <style>
+    	h1 {
+    		color : red;
+    	}
+    	h3 {
+    		color : blue;
+    	}
+    </style>
+</head>
+<body>
+<script>
+	var num;
+    while(true) {
+    	num = window.prompt("1 부터 9사이의 숫자를 한 개 입력하세요..");
+    	if (num >= 1 && num <= 9) 
+    		break;  
+    }
+    console.log(typeof num);
+
+    document.write("<h1>"+num+" 단입니다.</h1>");
+    document.write("<hr>");
+    for (let i = 1; i <= 9; i++) {
+        document.write("<h3>" + num + " × " + i + " = " + (num * i) + "</h3>");
+    }
+</script>
+</body>
+</html>

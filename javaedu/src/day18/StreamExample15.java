@@ -12,6 +12,6 @@ public class StreamExample15 {
 		studentList.add(new Student("홍길동", 87));
 
 		// Student를 score 스트림으로 변환
-		studentList.stream().mapToInt(s -> s.getScore()).forEach(score -> System.out.println(score));
+		studentList.stream().mapToInt(s -> s.getScore()).forEach(System.out :: println);
 	}
 }
