@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise9</title>
+</head>
+<body>
+<script src="util.js"></script>
+<script>
+    function printObject(p) {
+        if (typeof p !== 'object') {
+            return;
+        }
+        writeColor(p.msg, p.tag, p.color);
+    }
+
+    const objects = [
+        {
+            tag: 'h1',
+            color: '#E74C3C',
+            msg: '메시지1',
+        },
+        {
+            tag: 'h2',
+            color: '#7D3C98',
+            msg: '메시지2',
+        },
+        {
+            tag: 'h3',
+            color: '#2471A3',
+            msg: '메시지3',
+        },
+        {
+            tag: 'h4',
+            color: '#229954',
+            msg: '메시지4',
+        },
+        {
+            tag: 'h5',
+            color: '#D68910',
+            msg: '메시지5',
+        },
+    ]
+    for (let i = 0; i < 5; i++) {
+        printObject(objects[i])
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise10</title>
+</head>
+<body>
+<script src="util.js"></script>
+<script>
+    function DayInfo(name, year, month, date) {
+        this.name = name;
+        this.year = year;
+        this.month = month;
+        this.date = date;
+    }
+
+    DayInfo.prototype.getTotalDates = function() {
+        let birthDay = new Date(this.year, this.month - 1, this.date);
+        let now = new Date();
+
+        const diff = now.getTime() - birthDay.getTime();
+
+        return `${this.name}님은 태어난지 ${Math.floor(Math.abs(diff / (1000 * 60 * 60 * 24)))}일 되었어요.`;
+    }
+
+    DayInfo.prototype.getKorDay = function () {
+        let dayArray = ['일', '월', '화', '수', '목', '금', '토'];
+        let date = new Date(this.year, this.month - 1, this.date);
+        console.log(date);
+        let day = date.getDay();
+        console.log(dayArray[day])
+        return `${this.name}님은 ${dayArray[day]}요일에 태어났어요.`;
+    }
+
+    let person1 = new DayInfo('둘리', 1994, 12, 26);
+    let person2 = new DayInfo('또치', 2023, 4, 1);
+    let person3 = new DayInfo('도우너', 2023, 4, 5);
+
+    write(`${person1.name} ${person1.year} - ${person1.month} - ${person1.date}`)
+    writeColor(person1.getKorDay(), 'h3', 'blue');
+    writeColor(person1.getTotalDates(), 'h3', 'blue');
+    hr();
+    write(`${person2.name} ${person2.year} - ${person2.month} - ${person2.date}`)
+    writeColor(person2.getKorDay(), 'h3', 'red');
+    writeColor(person2.getTotalDates(), 'h3', 'red');
+    hr();
+    write(`${person3.name} ${person3.year} - ${person3.month} - ${person3.date}`)
+    writeColor(person3.getKorDay(), 'h3', 'green');
+    writeColor(person3.getTotalDates(), 'h3', 'green');
+    hr();
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script src="util.js"></script>
+<script>
+	function getKorDay(year, month, date) {  // "123", 1, 2"abc"
+		if(isNaN(year) || isNaN(month) || isNaN(date))
+			return undefined;
+		
+		var day_arr = ['일', '월', '화', '수', '목', '금', '토'];
+		var day = new Date(year, month-1, date);
+		return day_arr[day.getDay()];
+	}
+	
+	var year = window.prompt("연도를 입력해주세요.");
+	var month = window.prompt("월을 입력해주세요.");
+	var date = window.prompt("일을 입력해주세요.");
+	var result = getKorDay(year, month, date);
+	
+	if(typeof result == "undefined")  // result == undefined,  !result
+		writeColor("결과 없음", "h1", "red");
+	else {
+		writeColor(year+"년 "+month+"월 "+date+"일은 "+result+"요일입니다", "h1", "blue");
+		writeColor(`${year}년 ${month}월 ${date}일은 ${result}요일입니다`, "h1", "blue");
+	}
+</script>
+</body>
+</html>

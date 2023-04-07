@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<script>
+
+var smile_ctx;
+
+function draw_smile() {  
+	  var smile_canvas = document.getElementById('smile');  
+
+	  if(smile_canvas.getContext) { 
+	    smile_ctx = smile_canvas.getContext('2d'); 
+	    function box(ss,fs,x,y,w,h){
+			smile_ctx.beginPath();	    	
+	        smile_ctx.fillStyle = fs;
+	    	smile_ctx.fill();
+	    	smile_ctx.strokeStyle=ss;
+	    	smile_ctx.stroke();
+	    	smile_ctx.fillRect(x,y,w,h);
+	    }
+			
+		function circle(x,y,r,t,fs,ss){
+			smile_ctx.beginPath();
+			smile_ctx.arc(x,y,r,0,Math.PI*2,t);
+			smile_ctx.fillStyle=fs;
+			smile_ctx.strokeStyle=ss;
+			smile_ctx.fill();
+			smile_ctx.stroke();
+		}
+	   	
+		box('black','yellow',20,20,150,150);
+		
+		circle(75,80,20,'true','white','black');
+		circle(115,80,20,'true','white','black');
+
+		circle(80,80,10,'true','#33cccc','black');
+		circle(110,80,10,'true','#33cccc','black');
+
+		circle(82,80,5,'true','black','black');
+		circle(108,80,5,'true','black','black');
+
+		smile_ctx.beginPath();
+		smile_ctx.arc(95,97,10,-Math.PI/36,Math.PI,'true');
+		smile_ctx.fillStyle='yellow';
+		smile_ctx.strokeStyle='black';
+		smile_ctx.fill();
+		smile_ctx.stroke();
+		
+		smile_ctx.beginPath();
+		smile_ctx.arc(95,105,40,0,Math.PI, false);
+		smile_ctx.strokeStyle = "black";
+		smile_ctx.stroke();
+		smile_ctx.fillStyle = "brown";
+		smile_ctx.fill();
+		
+		box('black','white',87,105,7,7);
+		box('black','white',95,105,7,7);
+		
+		box('black','black',60,59,1.3,7);
+		box('black','black',73,54,1.3,7);
+		box('black','black',87,58,1.3,7);
+		
+		box('black','black',100,59,1.3,7);
+		box('black','black',113,54,1.3,7);
+		box('black','black',127,58,1.3,7);	
+
+	  } 
+	  else {
+	    alert("사파리 브라우저나 파이어폭스 1.5 이상의 브라우저에서만 사이트 내용을 제대로 볼 수 있습니다.")
+	  }
+
+	}  
+</script>
+</head>
+
+<body onload="draw_smile()" style="text-align:center">
+<h1>XXX의 HTML5 API 실습</h1>
+<div>
+	<button onclick="save();">저장하기</button>
+	<button onclick="restore();">읽어오기</button>
+	<button onclick="remove();">삭제하기</button>
+</div>	
+	<canvas id="smile" width="180" height="200"></canvas>
+	<script>
+
+	function save() {
+		alert(smile.toDataURL());
+		localStorage.setItem("smile", smile.toDataURL());
+	}
+	function restore() {
+		var img = new Image();
+		img.src = localStorage.getItem("smile");
+		img.onload = function() {
+			smile_ctx.drawImage(img, 0, 0);
+		}		
+	}
+	function remove() {
+		smile_ctx.clearRect(0,0,500,500);
+	}
+
+</script>		
+</body>
+</html>

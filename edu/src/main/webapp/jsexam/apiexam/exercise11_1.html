@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>이벤트 모델-인라인</h1>
+	<hr>
+	<button onclick="redWrite();">빨강색</button>
+	<button onclick="blueWrite();">파랑색</button>
+	<button onclick="yellowWrite();">노랑색</button>
+	<hr>
+	<h2 id="contents"></h2>	
+	
+<script>
+const dom = document.getElementById("contents");
+function redWrite() {  
+    dom.style.color = "red";
+}
+function blueWrite() {
+    dom.style.color = "blue";
+}
+function yellowWrite() {
+    dom.style.color = "yellow";
+}
+window.onload = function(){
+	const h2Tag = document.getElementsByTagName("h2")[0];
+	const d = new Date();
+	const month = d.getMonth()+1;
+	const day = d.getDate();
+	h2Tag.innerHTML = "오늘은 "+month+"월 "+day+"일입니다";
+}
+</script>
+</body>
+</html>
+

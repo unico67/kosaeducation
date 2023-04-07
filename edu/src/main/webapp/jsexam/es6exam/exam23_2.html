@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>포함된 자바스크립트 소스 테스트!!</h1>
+<hr>
+<script type="module">
+//import { sum } from './developer1es6.js';
+import { sum as MODULE1 } from './util2.js';
+document.open();
+//hr();
+//import { sum as MODULE1 } from './developer1es6.js';
+//import { sum as MODULE2 } from './developer2es6.js';
+document.writeln("<h2>sum() 의 실행 결과 : "+MODULE1(100, 200)+"</h2>");
+//document.writeln("<h2>"+MODULE2.sum+"</h2>");
+</script>
+</body>
+</html>

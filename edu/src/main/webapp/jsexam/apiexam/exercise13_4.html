@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<meta charset="UTF-8">
+<title>Title</title>
+<style>
+@font-face {
+	font-family: 'HSBombaram3_Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.1/HSBombaram3_Regular.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'HSBombaram3_Regular';
+	letter-spacing: 0.25em;
+}
+
+div#first_head {
+	font-size: 4em;
+	color: #392f31;
+	text-shadow: 0.1em 0.1em 0.1em #6937a1;
+	width: 100%;
+	height: 100px;
+	margin-bottom: 5%;
+}
+
+#first_head span {
+	color: #e4e4e9;
+}
+
+#weather_page {
+	width: 40em;
+	border: 3px #cfc7dc;
+	border-radius: 20px;
+	background-color: #cfc7dc;
+	box-shadow: 0px 0px 10px 5px #8977ad;
+	padding: 1em;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 3%;
+	margin-top: 3%;
+	display: inline-block;
+	padding: 3%
+}
+
+#weather_page button {
+	cursor: pointer; border : 3px #cfc7dc;
+	background-color: #808080;
+	border-radius: 10px;
+	color: #f0f0f0;
+	font-size: 2em;
+	padding-right: 2%;
+	padding-left: 2%;
+	font-family: 'HSBombaram3_Regular';
+	letter-spacing: 0.25em;
+	border: 3px #cfc7dc;
+}
+
+#weather_img {
+	margin-top: 10%;
+	margin-bottom: 20%;
+	width: 50%;
+	height: 50%;
+	
+}
+</style>
+
+
+<body>
+	<div align="center">
+		<header class="head">
+			<div id="first_head">
+				<p>
+					이<span>벤</span>트 <span>처</span>리 <span>실</span>습
+				</p>
+			</div>
+		</header>
+		<hr>
+		<div id="weather_page">
+			<button value="sun">맑음</button>
+			<button value="cloudy">흐림</button>
+			<button value="rain">비</button>
+		</div>
+		<div>
+			<img id="weather_img"></img>
+		</div>
+
+		<hr>
+	</div>
+
+	<script>
+		function clickHandler(e) {
+
+			let dom1 = document.getElementById('weather_img');
+
+			if (e.target.tagName == 'BUTTON') {
+				if (e.target.value == "sun")
+					dom1.src = "https://user-images.githubusercontent.com/122321793/229052464-1de32c50-c61a-45c4-bcc1-770a56e88d09.png";
+				else if (e.target.value == "cloudy") {
+					dom1.src = "https://user-images.githubusercontent.com/122321793/229052390-9d156cc7-67f9-41e7-bf4a-02bb8eb572b7.png";
+				} else if (e.target.value == 'rain') {
+					dom1.src = "https://user-images.githubusercontent.com/122321793/229052434-015178c0-57d7-4fd4-93f9-59d05184d154.png";
+				}
+			}
+		}
+
+		const weatherBtn = document.getElementById('weather_page');
+		const weatherImg = document.getElementById('weather_img');
+		weatherBtn.addEventListener('click', clickHandler, true);
+	</script>
+</body>
+</html>

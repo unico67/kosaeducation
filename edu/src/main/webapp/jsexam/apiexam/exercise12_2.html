@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../util.js"></script>
+<h1 onclick="location.href='https://ko.wikipedia.org/wiki/구구단'">구구단</h1>
+<script>
+  let btn = [];
+  function gugudan (num) {
+    let text = '';
+    let ggdan = document.getElementById("ggdan");
+    for (let i = 1; i < 10; i++) {
+      text += `${num} X ${i} = ${num*i} <br>`
+    }
+    ggdan.innerHTML = text;
+  }
+
+  for (let i = 1; i < 10; i++) {
+    write(`${i}단`, 'button');
+    btn.push(document.getElementsByTagName("button")[i-1]);
+    btn[i-1].addEventListener("click", function () {
+      gugudan(i);
+    })
+  }
+</script>
+<div id="ggdan"></div>
+</body>
+</html>

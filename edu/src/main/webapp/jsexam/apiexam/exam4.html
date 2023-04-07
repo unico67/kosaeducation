@@ -7,7 +7,7 @@
 <p id="demo">위치정보를 추출하려면 실행 버튼을 클릭하세요:</p>
 <button onclick="getLocation()">실행</button>
 <script>
-      var x=document.getElementById("demo");
+      const x=document.getElementById("demo");
 	  function getLocation() {
          if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(showPosition,showError);
@@ -26,7 +26,7 @@
                 x.innerHTML="위치를 구할 수 없습니다.";
                 break;
             case error.TIMEOUT:
-                x.innerHTML="사용자가 위치 기능 사용을 거부했습니다.";
+                x.innerHTML="타임아웃 오류가 발생했습니다.";
                 break;
             case error.UNKNOWN_ERROR:
                 x.innerHTML="기타 에러";

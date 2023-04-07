@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1{
+ text-align:center;
+}
+.contents{
+	width: auto;
+	height: auto;
+	text-align:center;
+}
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 onclick="movePage();"> 구구단 </h1>
+<hr>
+<button onclick="gugudan(1);">1단</button>
+<button onclick="gugudan(2);">2단</button>
+<button onclick="gugudan(3);">3단</button>
+<button onclick="gugudan(4);">4단</button>
+<button onclick="gugudan(5);">5단</button>
+<button onclick="gugudan(6);">6단</button>
+<button onclick="gugudan(7);">7단</button>
+<button onclick="gugudan(8);">8단</button>
+<button onclick="gugudan(9);">9단</button>
+<div class="contents" id="contents">
+	<div id="1"></div>
+	<div id="2"></div>
+	<div id="3"></div>
+	<div id="4"></div>
+	<div id="5"></div>
+	<div id="6"></div>
+	<div id="7"></div>
+	<div id="8"></div>
+	<div id="9"></div>
+</div>
+<script>
+const dom = document.getElementById("contents");
+function movePage(){
+	location.href = "https://ko.wikipedia.org/wiki/구구단";
+}
+function gugudan(value){
+	for(let i =1 ; i<=9;i++){
+		const doms = document.getElementById(i);
+		doms.innerHTML = value+" X "+ i + " = " + (value*i);
+	}
+}
+</script>
+</body>
+</html>

@@ -1,8 +1,9 @@
+let mmedia, play, progress;
+const maxim = 600;
 function initiate() {
-  maxim=600;
   mmedia=document.getElementById('media');
   play=document.getElementById('play');
-  bar=document.getElementById('bar');
+  const bar=document.getElementById('bar');
   progress=document.getElementById('progress');
 
   play.addEventListener('click', push, false);

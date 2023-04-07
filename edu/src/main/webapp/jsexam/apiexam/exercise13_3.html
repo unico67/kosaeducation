@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #title-box {
+            text-align: center;
+            height: 150px;
+            line-height: 150px;
+        }
+
+        #title {
+            font-size: 70px;
+            font-weight: bolder;
+            color: dodgerblue;
+            margin: 0 auto 0 auto;
+            text-shadow: 4px 5px 5px darkturquoise;
+        }
+
+        #button-box {
+            text-align: center;
+            width: 500px;
+            height: 100px;
+            padding: 20px;
+            line-height: 100px;
+            margin: 100px auto 100px auto;
+            border: 2px solid brown;
+            border-radius: 15px;
+            box-shadow: 10px 10px brown;
+        }
+        
+        #image-box{
+            text-align: center;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            margin: 20px auto 0 auto;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        hr {
+            border: 0px;
+            border-top: 5px dashed gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>이벤트 처리 실습</h1> -->
+    <div id="title-box">
+        <span id="title">
+            이벤트 처리 실습
+        </span>
+    </div>
+    <hr>
+    <div id="button-box">
+        <button value="sun">맑음</button>
+        <button value="cloud">흐림</button>
+        <button value="rain">비</button>
+    </div>
+    <hr>
+    <div id="image-box">
+        <img>
+    </div>
+    <script>
+        function showImage(e) {
+            let imageArea = document.getElementsByTagName("img");
+            console.log(imageArea);
+            console.log("../../images/" + e.target.value + ".png");
+            imageArea[0].src = "../../images/" + e.target.value + ".png";
+        }
+
+        document.getElementById("button-box").addEventListener("click", showImage);
+    </script>
+</body>
+</html>

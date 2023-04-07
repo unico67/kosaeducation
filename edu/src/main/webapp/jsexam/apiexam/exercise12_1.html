@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise12</title>
+</head>
+<body>
+<header>
+    <h1>구구단</h1>
+    <nav>
+        <button value="1">1단</button>
+        <button value="2">2단</button>
+        <button value="3">3단</button>
+        <button value="4">4단</button>
+        <button value="5">5단</button>
+        <button value="6">6단</button>
+        <button value="7">7단</button>
+        <button value="8">8단</button>
+        <button value="9">9단</button>
+    </nav>
+</header>
+<main>
+</main>
+<script>
+    function clickH1() {
+        location.href = 'https://ko.wikipedia.org/wiki/구구단';
+    }
+
+    function printMultiple(e) {
+        let result = ``;
+        for (let i = 1; i < 10; i++) {
+            result += `<h3>${e.target.value} * ${i} = ${e.target.value * i}</h3>`;
+        }
+        document.querySelector('main').innerHTML = result;
+    }
+
+    let buttons = document.querySelectorAll('button');
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', printMultiple)
+    }
+
+    let h1 = document.querySelector('h1');
+    h1.addEventListener('click', clickH1);
+</script>
+</body>
+</html>

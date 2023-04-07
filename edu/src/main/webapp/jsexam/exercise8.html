@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	function printH1(content) {
+		document.write("<h1>"+content+"</h1>");	
+	}
+	function printH4(content) {
+		document.write("<h4>"+content+"</h4>");
+	}
+	function apply(arr, func) {
+		if(arr == null || typeof arr != "object" || func == null || typeof func != "function") {
+			console.log("아규먼트 오류");
+			return false;
+		}
+			
+		for(let i = 0; i < arr.length; i++) {
+			func(arr[i]);
+		}
+		return true;
+	}
+	
+	var array = [];
+	var num;
+	while(true) {
+		num = window.prompt("숫자 또는 문자열을 입력해주세요.");
+		if(num == null)
+			break;
+		array.push(num);
+	}
+	console.log(array);
+	
+	var random = Math.floor(Math.random()*10+1);
+	var result;
+	switch (random) {
+		case 1 :
+		case 4 :
+		case 6 : 
+			result = apply(array, printH1);
+			break;
+		case 3 :
+		case 5 :
+		case 7 :
+			result = apply(array, printH4);
+			break;
+		case 8 :
+		case 9 :
+			result = apply("ㅋㅋ", printH1);
+			break;
+		default :
+			result = apply(array);
+	}
+	
+	console.log(random);
+	if(result)
+		window.alert("처리 성공");
+	else
+		window.alert("처리 실패");	
+</script>
+</body>
+</html>

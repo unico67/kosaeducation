@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap"
+	rel="stylesheet">
+<title>Insert title here</title>
+<style>
+body {
+	text-align: center;
+	font-family: 'Noto Sans KR', sans-serif;
+	background-color: #EBF5FF;
+}
+
+.container {
+	margin-top: 2%;
+	margin-left: 2%;
+	grid-column-gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	display: grid;
+	grid-column-gap: 20px;
+}
+
+.dan {
+	border: 1px solid #D2D2FF;
+	border-radius: 2vh;
+	width: 70%;
+	height: 3vh;
+	line-height: 3vh;
+	cursor: pointer;
+	background-color: #D2D2FF;
+	color: #6A5ACD;
+}
+
+.title {
+	font-weight: 1000;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2%;
+	text-decoration: none;
+	color: black;
+	font-size: 1.5rem;
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px solid #6A5ACD;
+	background-color: #6A5ACD;
+	border-radius: 2vh;
+	width: 10vw;
+	border-radius: 2vh;
+	color: white;
+	height: 6vh;
+	line-height: 6vh;
+	margin-top: 2%;
+}
+
+.title:hover {
+	font-size: 2rem;
+}
+
+#output {
+	margin-top: 5%;
+	color: #0000CD;
+}
+</style>
+</head>
+<body>
+	<div class="title" onclick="go()">구구단</div>
+	<div class="container">
+		<div class="dan" onclick="gugu(1)">1단</div>
+		<div class="dan" onclick="gugu(2)">2단</div>
+		<div class="dan" onclick="gugu(3)">3단</div>
+		<div class="dan" onclick="gugu(4)">4단</div>
+		<div class="dan" onclick="gugu(5)">5단</div>
+		<div class="dan" onclick="gugu(6)">6단</div>
+		<div class="dan" onclick="gugu(7)">7단</div>
+		<div class="dan" onclick="gugu(8)">8단</div>
+		<div class="dan" onclick="gugu(9)">9단</div>
+	</div>
+	<div id="output"></div>
+
+	<script>
+		const dom = document.getElementById('output');
+		function go() {
+			location.href = "https://ko.wikipedia.org/wiki/구구단";
+		}
+		function gugu(dan) {
+			dom.innerHTML = null;
+			for (let i = 1; i <= 9; i++) {
+				dom.innerHTML += `<h2>${dan} x ${i} =  ${dan * i}</h2>`;
+			}
+
+		}
+	</script>
+</body>
+</html>

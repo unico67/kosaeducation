@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+body {
+		text-align : center;
+}
+	
+nav {
+		text-align : center;
+		border : 1px solid #42053a;
+		width : 200px;
+		margin : 10px auto;
+		height : 50px;
+		border-radius : 10px;
+		padding-top : 25px;
+		box-shadow : 5px 5px 0px #720131;
+}
+
+button {
+		background-color : #29082f;
+		color : white;
+}
+
+h1 {
+		text-shadow : 2px 2px 5px #42053a, -2px -2px 5px #42053a,
+						   2px 2px 5px #29082f, -2px -2px 5px #29082f;
+		color : white;
+}
+</style>
+</head>
+<body>
+<h1>이벤트 처리 실습</h1>
+<hr>
+<nav>
+<button onclick="sun();">맑음</button>
+<button onclick="cloud();">흐림</button>
+<button onclick="rain();">비</button><br>
+</nav>
+<hr>
+<div>
+<img id = "w" src="" width="250">
+</div>
+<script>
+const dom = document.getElementById("w");
+function sun() {
+	dom.src = "images/sun.png";	
+}
+function cloud() {
+	dom.src = "images/cloud.png";	
+}
+function rain() {
+	dom.src = "images/rain.png";	
+}
+</script>
+</body>
+</html>
