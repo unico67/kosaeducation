@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>리터럴의 타입채크</title>
+</head>
+<body>
+<h2>리터럴별 타입 채크</h2>
+<pre>
+<script>
+	document.writeln("100 : " + typeof 100);
+	document.writeln("3.14 : " + typeof 3.14);
+	document.writeln("자바 : " + typeof "자바");
+	document.writeln("정의되지 않은 변수 : " + typeof sum);
+	document.writeln("true : " + typeof true);
+	document.writeln("function() {} : " + typeof function() {
+	});
+	document.writeln("[1,2,3] : " + typeof [ 1, 2, 3 ]);
+	document.writeln("new Object() : " + typeof new Object());
+	var result;
+	document.writeln("최기화되지 않은 변수 : " + typeof result);
+</script>
+</pre>
+</body>
+</html>

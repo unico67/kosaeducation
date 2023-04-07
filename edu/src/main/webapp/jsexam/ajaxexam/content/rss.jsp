@@ -5,7 +5,11 @@
   <c:import var="weather" 
  url="http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=1168064000">
   </c:import>
+<<<<<<< HEAD
   <!-- xml 파싱하기 --> 
+=======
+  <!-- xml 파싱하기 -->
+>>>>>>> refs/remotes/origin/master
   <x:parse varDom="wrss" xml="${weather}"></x:parse>
   <x:out select="$wrss/rss/channel/title"></x:out><br/> 
   

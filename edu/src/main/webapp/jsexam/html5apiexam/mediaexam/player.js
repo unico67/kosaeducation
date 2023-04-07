@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 let mmedia, play, progress;
 const maxim = 600;
 function initiate() {
   mmedia=document.getElementById('media');
   play=document.getElementById('play');
   const bar=document.getElementById('bar');
+=======
+function initiate() {
+  maxim=600;
+  mmedia=document.getElementById('media');
+  play=document.getElementById('play');
+  bar=document.getElementById('bar');
+>>>>>>> refs/remotes/origin/master
   progress=document.getElementById('progress');
 
   play.addEventListener('click', push, false);

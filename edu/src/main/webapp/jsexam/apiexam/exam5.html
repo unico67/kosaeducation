@@ -13,12 +13,21 @@
 <script src="../util.js"></script>
 <script>
     hr()
+<<<<<<< HEAD
 	const h1doms = document.getElementsByTagName("h1");
  	writeColor(h1doms, "h3", 'orange');
 	writeColor(h1doms.length, "h3", 'blue');
 	for(var i=0; i < h1doms.length; i++)
 		writeColor(h1doms[i].textContent, "h3", "red"); //적합
 	const h2doms = document.getElementsByTagName("h2");
+=======
+	let h1doms = document.getElementsByTagName("h1");
+ 	writeColor(h1doms, "h3", 'orange');
+	writeColor(h1doms.length, "h3", 'blue');
+	for(var i=0; i < h1doms.length; i++)
+		writeColor(h1doms[i].textContent, "h3", "red"); //적합
+	let h2doms = document.getElementsByTagName("h2");
+>>>>>>> refs/remotes/origin/master
 	write(h2doms.length, "h3");
 	writeColor(h2doms[0].innerHTML, "h3", "blue");
 </script>
